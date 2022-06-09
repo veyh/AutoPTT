@@ -1,3 +1,9 @@
+# 1.1.2 (22745cda) -- 2022-06-09
+
+**Fixes**
+
+* Allow setting a virtual key (like F24) as the PTT key. Note that this will not work in `Tap PTT` mode, as it requires a physical key (for now).
+
 # 1.1.1 (cac42e58) -- 2022-03-28
 
 **Fixes**

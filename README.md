@@ -16,9 +16,7 @@ There is also a hand-written **[change log](CHANGELOG.md)**, in case you're curi
 
 ## License
 
-This is commercial software that you'll need a license to run, but for now, you can try it out for free (until June 1st) with the following license key:
-
-`free-until-2022-06-01-H9qZkAskazC_dDJJQFKs9NR1EM9Ny0De`
+This is commercial software that you'll need a license to run.
 
 You can buy a license through [Gumroad](https://wibe.gumroad.com/l/autoptt). It's a one-time purchase, valid forever, for all future updates.
 
