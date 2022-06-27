@@ -1,3 +1,16 @@
+# unreleased
+
+**UI**
+
+* Add `View changelog` button to new version notification.
+* Add new version notification to license view (in case of unexpected problems with license servers that a new version might fix).
+
+**Fixes**
+
+* Use Gumroad License API directly if mine is unresponsive. This ensures that the license verification always works for paying customers. My server only handles manually-generated licenses, like limited time trial keys.
+* Save license key in settings file even if it's considered invalid at the moment. Previously, if, for example, the user's internet connection was down and they started the app with a valid license key, the key would be cleared from settings because it could not be validated. Then the user would have to go back to their email or Gumroad page to look up the license key again.
+* Fixes potential issue with saving and loading config files (`fopen` with `rb` and `wb` instead of `r` and `w`. No such nonsense on Linux :)
+
 # 1.1.2 (22745cda) -- 2022-06-09
 
 **Fixes**
