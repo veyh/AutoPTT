@@ -1,4 +1,4 @@
-# unreleased
+# 1.2.0 (06a961f5) -- 2022-07-08
 
 **Features**
 
