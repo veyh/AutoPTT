@@ -16,13 +16,16 @@ There is also a hand-written **[change log](CHANGELOG.md)**, in case you're curi
 
 ## License
 
-This is commercial software that you'll need a license to run.
-
 You can buy a license through [Gumroad](https://wibe.gumroad.com/l/autoptt). It's a one-time purchase, valid forever, for all future updates.
 
-I might add a proper trial version later.
+A proper trial version might be added later.
 
 ## Contact
 
 If you need help, found a bug, have a feature request or anything else you think I might want to know about, you can open an issue here on Github or join the [Discord](https://discord.gg/NHVsGZY3dF).
 
+## Known Issues
+
+AutoPTT will not work with games that require a physical key press to activate the mic. Some of these games are listed below. If you find that AutoPTT doesn't work with a game that isn't listed here, please let me know.
+
+- Counter-Strike: Global Offensive
