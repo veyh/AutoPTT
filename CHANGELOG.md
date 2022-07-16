@@ -1,3 +1,9 @@
+# 1.3.0 (b9523a9b) -- 2022-07-16
+
+**Features**
+
+* Add an option to try out the app without a license. Just click the `Trial` button. You'll have 5 minutes. After that, you can restart the app and click the `Trial` button again for another 5 minutes, and so on.
+
 # 1.2.0 (06a961f5) -- 2022-07-08
 
 **Features**

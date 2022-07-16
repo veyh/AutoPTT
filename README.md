@@ -18,7 +18,9 @@ There is also a hand-written **[change log](CHANGELOG.md)**, in case you're curi
 
 You can buy a license through [Gumroad](https://wibe.gumroad.com/l/autoptt). It's a one-time purchase, valid forever, for all future updates.
 
-A proper trial version might be added later.
+You may use the app without a license, too, but only for 5 minutes. After that, you'll need to restart it, and then you can use it for another 5 minutes if you like. 
+
+For uninterrupted use, though, you'll need a license.
 
 ## Contact
 
