@@ -1,3 +1,9 @@
+# 1.3.1 (8ed47b9c) -- 2022-07-16
+
+**Fixes**
+
+* Fix crash on auto update. I didn't realize that I'd put the wrong `zip.dll` in the release build. This crash happens with both `1.2.0` and `1.3.0`.
+
 # 1.3.0 (b9523a9b) -- 2022-07-16
 
 **Features**
