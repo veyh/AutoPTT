@@ -28,6 +28,6 @@ If you need help, found a bug, have a feature request or anything else you think
 
 ## Known Issues
 
-AutoPTT will not work with games that require a physical key press to activate the mic. Some of these games are listed below. If you find that AutoPTT doesn't work with a game that isn't listed here, please let me know.
+AutoPTT will not work with games that require a physical key press to activate the mic **unless you use [AutoPTT Sidekick](https://github.com/veyh/AutoPTT-sidekick/)**. Some of these games are listed below. If you find that AutoPTT alone doesn't work with a game that isn't listed here, please let me know and I'll add it to the list.
 
 - Counter-Strike: Global Offensive
