@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.1 - 2022-11-02
+### Changed
+* Only show input devices in the device list.
+### Fixed
+* Fix an issue with the app not being able to listen to a sound device. It should now show up as "listening" to the microphone in Windows Sound Settings.
+
 ## 1.4.0 - 2022-08-16
 ### Added
 * Support sending physical key events with [AutoPTT Sidekick](https://github.com/veyh/AutoPTT-sidekick/). It's possible not all keys work with this setup (yet) -- the UI should indicate whether this is the case, and you can try a different key. I would also appreciate it if you let me know which key it was that did not work so that I can fix it.
