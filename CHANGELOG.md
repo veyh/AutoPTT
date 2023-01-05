@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.0 - 2023-01-06
+### Added
+* Add icon.
+* Add help text for `Release Delay`.
+* Add help text for `Update Interval`.
+
 ## 1.4.1 - 2022-11-02
 ### Changed
 * Only show input devices in the device list.
