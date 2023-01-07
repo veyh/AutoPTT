@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6.0 - 2023-01-07
+### Added
+* Add option to play a sound when PTT key is pressed.
+* Add option to play a sound when PTT key is released.
+
 ## 1.5.0 - 2023-01-06
 ### Added
 * Add icon.
