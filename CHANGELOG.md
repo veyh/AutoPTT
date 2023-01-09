@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.0 - 2023-01-09
+### Added
+* Make PTT down/up sounds customizable.
+
 ## 1.6.0 - 2023-01-07
 ### Added
 * Add option to play a sound when PTT key is pressed.
