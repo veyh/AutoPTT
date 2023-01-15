@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.8.0 - 2023-01-15
+### Added
+* Add help text for `Activation Mode`.
+* Add `Activation Mode: Manual`.
+### Fixed
+* In `Tap` mode, don't release PTT key if it's physically still held down. (This could happen with a short `Release Delay` if you pressed and held the key without speaking.)
+
+
 ## 1.7.0 - 2023-01-09
 ### Added
 * Make PTT down/up sounds customizable.
