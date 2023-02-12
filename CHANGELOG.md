@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.9.0 - 2023-02-13
+### Added
+* Add `Push-to-Mute` hotkey.
+* Add option to play a sound when `Push-to-Mute` key is pressed/released.
+
 ## 1.8.0 - 2023-01-15
 ### Added
 * Add help text for `Activation Mode`.
