@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.10.0 - 2023-03-19
+### Added
+* Add a button for testing sound effects (in the configuration popup).
+* Support changing individual sound effect volume.
+
 ## 1.9.0 - 2023-02-13
 ### Added
 * Add `Push-to-Mute` hotkey.
