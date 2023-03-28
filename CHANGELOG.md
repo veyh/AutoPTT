@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.11.0 - 2023-03-28
+### Added
+* Add hotkeys and sound effects for changing activation mode.
+
 ## 1.10.0 - 2023-03-19
 ### Added
 * Add a button for testing sound effects (in the configuration popup).
