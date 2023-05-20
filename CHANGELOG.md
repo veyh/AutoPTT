@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.11.1 - 2023-05-20
+### Fixed
+* Play sound effects from the beginning if an event triggering the sound effect happens while already playing. Previously, the current playback would simply finish, which could have led to some confusion as to whether the new event actually happened.
+
 ## 1.11.0 - 2023-03-28
 ### Added
 * Add hotkeys and sound effects for changing activation mode.
