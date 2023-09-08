@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.12.0 - 2023-09-09
+### Added
+* Add `Capture Mode` option. The `Default` mode works as in previous versions of the app. The experimental `Advanced` mode is new and should be more compatible with apps that play sounds through your mic (eg. [Soundpad](https://www.leppsoft.com/soundpad/)).
+
 ## 1.11.1 - 2023-05-20
 ### Fixed
 * Play sound effects from the beginning if an event triggering the sound effect happens while already playing. Previously, the current playback would simply finish, which could have led to some confusion as to whether the new event actually happened.
