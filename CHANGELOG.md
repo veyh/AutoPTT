@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.13.0 - 2023-09-09
+### Added
+* Support extra hotkeys to activate PTT in `Tap` and `Manual` activation modes.
+
 ## 1.12.0 - 2023-09-09
 ### Added
 * Add `Capture Mode` option. The `Default` mode works as in previous versions of the app. The experimental `Advanced` mode is new and should be more compatible with apps that play sounds through your mic (eg. [Soundpad](https://www.leppsoft.com/soundpad/)).
