@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.14.0 - 2024-03-23
+### Added
+* Support using Xbox-like controller buttons as hotkeys.
+
 ## 1.13.0 - 2023-09-09
 ### Added
 * Support extra hotkeys to activate PTT in `Tap` and `Manual` activation modes.
