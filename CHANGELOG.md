@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.14.1 - 2024-03-26
+### Fixed
+* Trim leading and trailing whitespace from license key.
+* Check license every time the save button is clicked, even if the license text hasn't changed. This should make things a lot less confusing when there is a problem with the license server and not the license key.
+
 ## 1.14.0 - 2024-03-23
 ### Added
 * Support using Xbox-like controller buttons as hotkeys.
