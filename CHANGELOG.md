@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.15.0 - 2024-05-16
+### Added
+* Add tray icon. It's color changes based on PTT state, just like the current value meter (green = active, yellow = release delay, grey = inactive).
+* Support minimizing to system tray.
+### Fixed
+* Support starting from command prompt. (It used to throw an "out of memory" error).
+
 ## 1.14.1 - 2024-03-26
 ### Fixed
 * Trim leading and trailing whitespace from license key.
