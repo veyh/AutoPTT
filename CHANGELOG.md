@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.16.0 - 2024-08-31
+### Added
+* Add option to start AutoPTT on boot.
+
 ## 1.15.0 - 2024-05-16
 ### Added
 * Add tray icon. Its color changes based on PTT state, just like the current value meter (green = active, yellow = release delay, grey = inactive).
