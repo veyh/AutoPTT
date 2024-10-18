@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.16.1 - 2024-10-18
+### Fixed
+* Prevent multiple instances of AutoPTT from running. Now, trying to start another instance should just bring the already running one into the foreground.
+* Support games and apps (eg. Mumble) that use [raw input](https://learn.microsoft.com/en-us/windows/win32/inputdev/about-raw-input) to detect key presses.
+
 ## 1.16.0 - 2024-08-31
 ### Added
 * Add option to start AutoPTT on boot.
