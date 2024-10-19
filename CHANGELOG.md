@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.17.0 - 2024-10-19
+### Added
+* Add support for mouse buttons (middle/back/forward).
+
 ## 1.16.1 - 2024-10-18
 ### Fixed
 * Prevent multiple instances of AutoPTT from running. Now, trying to start another instance should just bring the already running one into the foreground.
