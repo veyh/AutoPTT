@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.18.0 - 2024-11-07
+### Added
+* Add activation modes `Open Mic to PTT: Tap` and `Open Mic to PTT: Manual`. They can be used when you want to use Push-to-Talk but your game/app only supports open mic (voice activation).
+* Add hotkey for `Mode: Open Mic to PTT: Tap`.
+* Add hotkey for `Mode: Open Mic to PTT: Manual`.
+* Add sound effect setting for `Mode: Open Mic to PTT: Tap`.
+* Add sound effect setting for `Mode: Open Mic to PTT: Manual`.
+
 ## 1.17.0 - 2024-10-19
 ### Added
 * Add support for mouse buttons (middle/back/forward).
