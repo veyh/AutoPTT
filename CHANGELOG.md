@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.18.1 - 2024-11-16
+### Fixed
+* Fix crash when setting activation mode to "Open Mic to PTT" without a device selected.
+* Fix crash on startupt when using "Open Mic to PTT" activation mode.
+
 ## 1.18.0 - 2024-11-07
 ### Added
 * Add activation modes `Open Mic to PTT: Tap` and `Open Mic to PTT: Manual`. They can be used when you want to use Push-to-Talk but your game/app only supports open mic (voice activation).
