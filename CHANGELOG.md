@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.19.0 - 2024-11-17
+### Changed
+* Hide "Activation Threshold" and "Release Delay" settings when using manual activation mode.
+
 ## 1.18.1 - 2024-11-16
 ### Fixed
 * Fix crash when setting activation mode to "Open Mic to PTT" without a device selected.
