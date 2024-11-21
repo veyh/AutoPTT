@@ -1,6 +1,6 @@
 # AutoPTT
 
-[AutoPTT](https://autoptt.com/) is a Windows application that presses and releases your push-to-talk key based on voice activity.
+[AutoPTT](https://autoptt.com/) is a Windows application that turns Push-to-Talk into Voice Activation, or vice versa. Among other things.
 
 **This repo is issue tracking and documentation only.**
 
