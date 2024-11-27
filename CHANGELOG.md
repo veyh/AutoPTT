@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.20.0 - 2024-11-27
+### Changed
+* If no valid license is found on startup, automatically activate the trial.
+
 ## 1.19.0 - 2024-11-17
 ### Changed
 * Hide "Activation Threshold" and "Release Delay" settings when using manual activation mode.
