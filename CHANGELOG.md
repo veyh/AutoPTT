@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.21.0 - 2024-11-30
+### Added
+* Add `Deactivation Threshold`. When enabled, PTT is released only after the sound level falls below both `Activation Threshold` and `Deactivation Threshold`. Going over either resets `Release Delay`.
+
 ## 1.20.0 - 2024-11-27
 ### Changed
 * If no valid license is found on startup, automatically activate the trial.
