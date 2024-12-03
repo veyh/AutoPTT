@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.22.0 - 2024-12-04
+### Added
+* Add `Consume PTT Key` option for `Open Mic to PTT` modes. Enabling it will block Windows and any app/game from registering the key press. This used to be enabled by default in earlier versions.
+### Changed
+* Make `Update Available` notification visible even if the main window already has a scrollbar on it.
+### Fixed
+* Fix PTT key detection after changing it when using `Tap` or either `Open Mic to PTT` activation modes.
+
 ## 1.21.1 - 2024-12-02
 ### Fixed
 * Remove some inconsistency in the UI when using `Manual` or either `Open Mic to PTT` activation mode.
