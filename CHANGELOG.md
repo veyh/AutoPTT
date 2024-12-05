@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.23.0 - 2024-12-05
+### Added
+* Add `Mode: Manual/Open Mic to PTT (Manual)` hotkey. You can use it as an "Open Mic with Toggle Mute", since `Manual` mode always unmutes your mic, while `Open Mic to PTT (Manual)` mutes it (unless you press the PTT key, of course).
+### Fixed
+* Allow selecting a device with a name that contains weird characters. (It still might not be displayed correctly but at least it can be selected, which wasn't the case previously.)
+
 ## 1.22.0 - 2024-12-04
 ### Added
 * Add `Consume PTT Key` option for `Open Mic to PTT` modes. Enabling it will block Windows and any app/game from registering the key press. This used to be enabled by default in earlier versions.
