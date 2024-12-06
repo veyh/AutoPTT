@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.23.1 - 2024-12-06
+### Fixed
+* Fix hotkeys not being saved correctly (this bug was introduced in 1.23.0)
+
 ## 1.23.0 - 2024-12-05
 ### Added
 * Add `Mode: Manual/Open Mic to PTT (Manual)` hotkey. You can use it as an "Open Mic with Toggle Mute", since `Manual` mode always unmutes your mic, while `Open Mic to PTT (Manual)` mutes it (unless you press the PTT key, of course).
