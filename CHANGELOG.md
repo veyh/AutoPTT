@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.24.0 - 2024-12-08
+### Added
+* Support binding PTT and any other hotkey to just CTRL, SHIFT or ALT. (Well, it supports WIN too but you probably don't want to use that.)
+* Support arbitrary key combinations for hotkeys. For example, you can now use `A-B`, `A-C` or even `A-B-C` as hotkeys, if you really want to. Think of it as being able to use any key as a "modifier."
+### Changed
+* Remove `VK_` prefix from some of the most common keys.
+
 ## 1.23.1 - 2024-12-06
 ### Fixed
 * Fix hotkeys not being saved correctly (this bug was introduced in 1.23.0)
