@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.24.1 - 2024-12-11
+### Fixed
+* Fix possibly inconsistent PTT key state after switching activation modes while the mic is active.
+
 ## 1.24.0 - 2024-12-08
 ### Added
 * Support binding PTT and any other hotkey to just CTRL, SHIFT or ALT. (Well, it supports WIN too but you probably don't want to use that.)
