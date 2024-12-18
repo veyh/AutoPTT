@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.25.0 - 2024-12-18
+### Added
+* Add `Push-to-Mute (Global)` hotkey that mutes the microphone system-wide.
+
 ## 1.24.1 - 2024-12-11
 ### Fixed
 * Fix possibly inconsistent PTT key state after switching activation modes while the mic is active.
