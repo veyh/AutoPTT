@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.26.0 - 2024-12-27
+In addition to the "visible" changes, this release also changes how settings are stored. There is an automatic migration that should handle things for you but just in case I missed something and your settings got messed up, I'm sorry!
+
+### Added
+* Add option to hide the "Update Available" notification.
+### Changed
+* Use a nicer font in the UI.
+### Fixed
+* Update list of devices when devices get added or removed.
+
 ## 1.25.0 - 2024-12-18
 ### Added
 * Add `Push-to-Mute (Global)` hotkey that mutes the microphone system-wide.
