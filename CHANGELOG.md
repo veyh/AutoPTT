@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.26.1 - 2024-12-27
+### Fixed
+* Fix binding hotkeys that weren't already bound to something before updating to version 1.26.0.
+
 ## 1.26.0 - 2024-12-27
 In addition to the "visible" changes, this release also changes how settings are stored. There is an automatic migration that should handle things for you but just in case I missed something and your settings got messed up, I'm sorry!
 
