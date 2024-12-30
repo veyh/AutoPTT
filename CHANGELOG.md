@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.27.0 - 2024-12-30
+### Added
+* Add an Overlay that shows the current `Activation Mode` and activity state (green = active; yellow = release delay; gray = inactive; red = system-wide mute).
+
 ## 1.26.1 - 2024-12-27
 ### Fixed
 * Fix binding hotkeys that weren't already bound to something before updating to version 1.26.0.
