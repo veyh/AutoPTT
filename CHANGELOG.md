@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.27.1 - 2025-01-01
+### Fixed
+* Fix a very small memory leak in the Overlay.
+* Make hotkey detection more reliable when GPU is under heavy load.
+
 ## 1.27.0 - 2024-12-30
 ### Added
 * Add an Overlay that shows the current `Activation Mode` and activity state (green = active; yellow = release delay; gray = inactive; red = system-wide mute).
