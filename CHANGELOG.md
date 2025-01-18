@@ -1,5 +1,35 @@
 # Changelog
 
+## 2.0.0 - 2025-01-18
+### Added
+* Add support for multiple Push-to-Talk and Push-to-Mute keys.
+    * The activity state displayed in the `Current Value` field, the app
+      icon, the tray icon and the icon in the Overlay now represent the
+      "aggregate" state of all PTT keys; that is, if one of the PTT keys is
+      active (green), then `Current Value` and the icons will be green as
+      well.
+    * The activity state for an individual PTT kes is now indicated by the
+      color of the border of the keybind button instead.
+    * Furthermore, the system-wide mute in `Open Mic to PTT` modes is also
+      determined from the aggregate state.
+* Make it possible to use F13-F24 as PTT by selecting them from a menu while binding the key. (This is useful for Voice Activity mode, when you don't need to press the key yourself.)
+* Add `Send Feedback` button.
+* Add an `Activation Window` setting for `Tap` and `Open Mic to PTT (Tap)`
+modes. It starts when the PTT key is released, and lasts until the given
+time has passed or the sound level goes over the activation threshold.
+    * The mic is kept active during the Activation Window. Basically, it's
+    like Release Delay for BEFORE you start talking.
+* Backup settings file when it's migrated to a new version or when it fails to load due to an unknown error.
+### Changed
+* Split GUI into tabs. Currently there are two: `General` and `Device 1`. This is in preparation for multiple device support, which is probably coming at some point in the future.
+* Remove `Update Interval` setting. It's now hardcoded to 5 ms (200 Hz).
+### Fixed
+* Fix files not being deleted when uninstalling.
+* Fix an issue with using modifier keys as PTT. The different "sides" are also now differentiated, so instead of "CTRL" the app uses "LCTRL" and "RCTRL".
+* When a conflicting keybind is set, the other key(s) are now unbound and a warning is shown.
+* Fix an issue that sometimes caused duplicate key down events to be generated in Voice Activity, Tap and Manual modes (which could result in extra characters while typing).
+* Prevent setting a hotkey from immediately triggering that hotkey.
+
 ## 1.27.1 - 2025-01-01
 ### Fixed
 * Fix a very small memory leak in the Overlay.
