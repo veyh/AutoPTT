@@ -8,7 +8,7 @@
       "aggregate" state of all PTT keys; that is, if one of the PTT keys is
       active (green), then `Current Value` and the icons will be green as
       well.
-    * The activity state for an individual PTT kes is now indicated by the
+    * The activity state for an individual PTT key is now indicated by the
       color of the border of the keybind button instead.
     * Furthermore, the system-wide mute in `Open Mic to PTT` modes is also
       determined from the aggregate state.
