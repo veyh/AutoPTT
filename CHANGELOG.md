@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.0 - 2025-01-19
+### Added
+* Change window icon based on activity.
+* Add an overlay icon to the taskbar, indicating activity. Note that the taskbar overlay icon only works when the Windows setting `Use small taskbar buttons` is turned `Off`.
+* Make it possible to move the Overlay by enabling the `Unlock for moving` option.
+
 ## 2.0.0 - 2025-01-18
 ### Added
 * Add support for multiple Push-to-Talk and Push-to-Mute keys.
