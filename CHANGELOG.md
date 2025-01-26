@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.2.0 - 2025-01-26
+### Added
+* Support using (physical) key combinations as primary PTT keys
+### Fixed
+* Support `Consume PTT Key` for Secondary PTT keys in `Open Mic to PTT`
+modes
+* Fix an issue that may have prevented mouse side buttons from being used as PTT.
+
 ## 2.1.0 - 2025-01-19
 ### Added
 * Change window icon based on activity.
