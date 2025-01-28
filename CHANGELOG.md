@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.2.1 - 2025-01-28
+### Fixed
+* Support secondary PTT keys that are not physical in `Open Mic to PTT`
+modes when `Consume PTT Key` is enabled.
+
 ## 2.2.0 - 2025-01-26
 ### Added
 * Support using (physical) key combinations as primary PTT keys
