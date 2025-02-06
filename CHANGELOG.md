@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.0 - 2025-02-06
+### Added
+* Animate PTT key when `Tap Activation Window` or `Release Delay` is active.
+### Fixed
+* Fix an issue that may have prevented settings from being saved.
+
 ## 2.2.1 - 2025-01-28
 ### Fixed
 * Support secondary PTT keys that are not physical in `Open Mic to PTT`
