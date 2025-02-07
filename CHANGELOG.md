@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.1 - 2025-02-07
+### Fixed
+* When the currently selected device is disconnected, the setting no longer
+resets back to `NONE`. Instead, all functionality is disabled until the
+device is connected, or another device is selected.
+
 ## 2.3.0 - 2025-02-06
 ### Added
 * Animate PTT key when `Tap Activation Window` or `Release Delay` is active.
