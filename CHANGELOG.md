@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.4.0 - 2025-02-08
+### Added
+* Show license error in Overlay.
+### Fixed
+* Fix a bug with the [Elgato Stream Deck plugin](https://marketplace.elgato.com/product/autoptt-d8d752ff-b294-4ca3-a432-14f287755ab1)
+that caused the currently selected device to reset back to NONE when
+changing the activation mode through the plugin.
+
 ## 2.3.1 - 2025-02-07
 ### Fixed
 * When the currently selected device is disconnected, the setting no longer
