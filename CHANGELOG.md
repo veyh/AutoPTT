@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.5.0 - 2025-02-09
+### Changed
+* Increase maximum number of Primary PTT keys from 5 to 20.
+
 ## 2.4.0 - 2025-02-08
 ### Added
 * Show license error in Overlay.
