@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.6.0 - 2025-03-04
+### Added
+* Support Push-to-Talk, Push-to-Mute and Push-to-Mute (Global) via IPC (eg. Stream Deck plugin).
+* Show license error details. Hide the error when the license text is edited or when the "Save" button is clicked. (Previously, the error was hidden on a timer.)
+### Changed
+* Only automatically activate the trial on startup if the license is empty.
+### Fixed
+* Stay in the license view when a new license is entered while trial is active. Only exit the view if the new license is valid.
+* Fix memory leak in IPC (eg. Overlay, Stream Deck plugin).
+
 ## 2.5.0 - 2025-02-09
 ### Changed
 * Increase maximum number of Primary PTT keys from 5 to 20.
