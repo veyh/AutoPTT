@@ -1,0 +1,302 @@
+syntax = "proto3";
+
+package autoptt;
+
+message Settings {
+  uint32 version = 1;
+
+  double threshold = 2;
+
+  bool use_deact_threshold = 3;
+  double deact_threshold = 4;
+
+  bool safe = 5;
+
+  uint32 safe_interval_ms = 6;
+  uint32 deprecated_update_interval_ms = 7;
+  uint32 release_delay_ms = 8;
+
+  ActivationMode activation_mode = 11;
+  MeterType meter_type = 12;
+
+  StartOnBootType start_on_boot_type = 13;
+
+  string deprecated_device_name_or_uuid = 14; // --> device_name, device_uuid (v6)
+  string license_key = 15;
+  bool use_sidekick = 16;
+
+  Sound sound_on_ptt_down = 17;
+  Sound sound_on_ptt_up = 18;
+  Sound sound_on_push_to_mute_down = 19;
+  Sound sound_on_push_to_mute_up = 20;
+  Sound sound_on_push_to_mute_global_down = 21;
+  Sound sound_on_push_to_mute_global_up = 22;
+  Sound sound_on_set_mode_to_voice_activity = 23;
+  Sound sound_on_set_mode_to_tap = 24;
+  Sound sound_on_set_mode_to_manual = 25;
+  Sound sound_on_set_mode_to_tap_open_mic_to_ptt = 26;
+  Sound sound_on_set_mode_to_manual_open_mic_to_ptt = 27;
+
+  HotkeyV3 ptt_single = 10; // --> key_groups (v4)
+  HotkeyV3 key_push_to_mute_single = 28; // --> key_groups (v4)
+
+  HotkeyV3 key_push_to_mute_global = 29;
+  HotkeyV3 key_set_mode_to_voice_activity = 30;
+  HotkeyV3 key_set_mode_to_tap = 31;
+  HotkeyV3 key_set_mode_to_manual = 32;
+  HotkeyV3 key_set_mode_to_tap_open_mic_to_ptt = 33;
+  HotkeyV3 key_set_mode_to_manual_open_mic_to_ptt = 34;
+  HotkeyV3 key_swap_mode_between_manual_and_voice_activity = 35;
+  HotkeyV3 key_swap_mode_between_manual_and_tap = 36;
+  HotkeyV3 key_swap_mode_between_manual_and_manual_open_mic_to_ptt = 37;
+
+  repeated HotkeyV3 deprecated_extra_trigger_keys = 38; // --> key_groups (v4)
+
+  bool minimize_to_tray = 39;
+  bool open_mic_to_ptt_consume_input = 40;
+  bool update_check = 41;
+
+  string ipc_addr = 42;
+
+  bool overlay_enable = 43;
+  OverlaySettings overlay_settings = 44;
+
+  string device_display_name = 45;
+  repeated HotkeyGroup key_groups = 50;
+
+  reserved 46 to 49;
+
+  SelectedTab selected_tab = 51;
+
+  bool use_tap_activation_window = 52;
+  uint32 tap_activation_window_ms = 53;
+
+  string device_name = 56;
+  string device_uuid = 57;
+  uint64 app_version = 58;
+}
+
+enum ActivationMode {
+  AUTOMATIC = 0;
+  TAP_PTT = 1;
+  MANUAL = 2;
+  TAP_OPEN_MIC_TO_PTT = 3;
+  MANUAL_OPEN_MIC_TO_PTT = 4;
+}
+
+enum MeterType {
+  PEAK_VALUE_API = 0;
+  CAPTURE_API = 1;
+}
+
+enum StartOnBootType {
+  NO = 0;
+  YES = 1;
+  YES_MINIMIZED = 2;
+}
+
+message Sound {
+  bool enabled = 1;
+  string file = 2;
+  double volume = 3;
+}
+
+message HotkeyV3 {
+  repeated uint32 vk_codes = 1;
+}
+
+message HotkeyGroup {
+  string display_name = 1;
+  HotkeyV3 push_to_talk = 2;
+  repeated HotkeyV3 push_to_mute = 3;
+  repeated HotkeyV3 extra_triggers = 4;
+};
+
+message SelectedTab {
+  oneof tab {
+    SelectedTabGeneral general = 1;
+    SelectedTabDevice device = 2;
+  }
+}
+
+message SelectedTabGeneral {}
+message SelectedTabDevice {
+  int32 device_index = 1;
+}
+
+message Ipc {
+  oneof message {
+    //
+    // Sent by server
+    //
+
+    IpcServerHello server_hello = 23;
+
+    IpcActivityStateChanged activity_state_changed = 1;
+    IpcAppEnabledStateChanged app_enabled_state_changed = 25;
+    IpcCurrentValueChanged current_value_changed = 18;
+    IpcMuteStateChanged mute_state_changed = 2;
+    IpcSettingsChanged settings_changed = 3;
+
+    IpcSidekickConnected sidekick_connected = 7;
+    IpcSidekickDisconnected sidekick_disconnected = 8;
+
+    IpcUpdaterStateChanged updater_state_changed = 14;
+    IpcUpdateCheckSuccess update_check_success = 15;
+    IpcUpdateCheckFailed update_check_failed = 16;
+
+    IpcGuiDeviceChanged gui_device_changed = 24;
+
+    //
+    // Sent by client
+    //
+
+    IpcOverlayHello overlay_hello = 4;
+    IpcClientConfigure client_configure = 22;
+
+    IpcRequestRestart request_restart = 10;
+    IpcRequestExit request_exit = 11;
+    IpcRequestUpdate request_update = 12;
+
+    IpcRequestUpdateSettings request_update_settings = 13;
+    IpcRequestPlaySfx request_play_sfx = 21;
+
+    IpcRequestSwapActivationMode request_swap_activation_mode = 26;
+    IpcRequestSetPushToTalkState request_set_push_to_talk_state = 27;
+    IpcRequestSetPushToMuteState request_set_push_to_mute_state = 28;
+    IpcRequestSetPushToMuteGlobalState request_set_push_to_mute_global_state = 29;
+  }
+
+  reserved 5, 6, 9, 17, 19, 20;
+}
+
+message IpcActivityStateChanged {
+  ActivityState aggregate_state = 1;
+  repeated ActivityState key_group_states = 2;
+}
+
+enum ActivityState {
+  INACTIVE = 0;
+  ACTIVE = 1;
+  ACTIVE_RELEASE_DELAY = 2;
+  ACTIVE_TAP_ACTIVATION_WINDOW = 3;
+}
+
+message IpcMuteStateChanged {
+  bool is_muted = 1;
+}
+
+message IpcSettingsChanged {
+  Settings settings = 1;
+}
+
+message OverlaySettings {
+  bool show_when_inactive = 1;
+  bool show_mode_text = 2;
+  bool show_ptt_key_name = 3;
+  bool is_movable = 4;
+  int32 x = 5;
+  int32 y = 6;
+}
+
+message IpcOverlayHello {}
+
+message IpcSidekickConnected {
+  string port = 1;
+}
+
+message IpcSidekickDisconnected {}
+message IpcRequestRestart {}
+message IpcRequestExit {}
+message IpcRequestUpdate {}
+
+message IpcRequestUpdateSettings {
+  Settings settings = 1;
+  bool force_license_check = 2;
+}
+
+message IpcUpdaterStateChanged {
+  UpdaterState state = 1;
+  uint32 progress_pct = 2;
+  string message = 3;
+}
+
+enum UpdaterState {
+  IDLE = 0;
+  UPDATING = 1;
+  UPDATE_FAILED = 2;
+  UPDATE_SUCCESS = 3;
+}
+
+message IpcUpdateCheckSuccess {
+  bool is_newer = 1;
+  string latest_version = 2;
+  string changelog = 3;
+  string download_url = 4;
+  string signature_url = 5;
+}
+
+message IpcUpdateCheckFailed {}
+
+message IpcCurrentValueChanged {
+  double value = 1;
+}
+
+message IpcMonitoringAllowedChanged {
+  bool is_allowed = 1;
+}
+
+message IpcRequestPlaySfx {
+  uint64 sfx = 1;
+}
+
+message IpcClientConfigure {
+  uint64 current_value_update_rate_ms = 1; // Defaults to 0 (disabled).
+  uint32 ipc_version = 2;
+  string ipc_tag = 3;
+}
+
+message IpcServerHello {
+  // SHOULD BE EQUAL TO CLIENT, otherwise no promises anything will work!
+  uint32 ipc_version = 1;
+
+  // Format:  (major * 1000 * 1000) + (minor * 1000) + patch
+  // Example: app version 1.2.3 --> 1002003
+  uint32 app_version = 2;
+}
+
+message IpcGuiDeviceChanged {
+  string device_name_or_uuid = 1;
+}
+
+message IpcAppEnabledStateChanged {
+  AppEnabledState state = 1;
+}
+
+enum AppEnabledState {
+  ENABLED = 0;
+
+  // Occures when the license is either invalid or the trial has expired.
+  DISABLED_INVALID_LICENSE = 1;
+
+  // Occurs when you're writing into a text box, or when you're biding a key.
+  DISABLED_BLOCKED_BY_GUI = 2;
+}
+
+message IpcRequestSwapActivationMode {
+  repeated ActivationMode modes = 1;
+}
+
+message IpcRequestSetPushToTalkState {
+  uint32 key_group_index = 1;
+  bool is_down = 2;
+}
+
+message IpcRequestSetPushToMuteState {
+  uint32 key_group_index = 1;
+  bool is_down = 2;
+}
+
+message IpcRequestSetPushToMuteGlobalState {
+  bool is_down = 1;
+}
