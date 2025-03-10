@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.6.1 - 2025-03-10
+### Fixed
+* Fix error message spam when GPU driver crashes or is reset. Now, the app will simply exit after clicking OK (which was the original intention).
+
 ## 2.6.0 - 2025-03-04
 ### Added
 * Support Push-to-Talk, Push-to-Mute and Push-to-Mute (Global) via IPC (eg. Stream Deck plugin).
