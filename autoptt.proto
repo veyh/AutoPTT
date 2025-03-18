@@ -36,6 +36,8 @@ message Settings {
   Sound sound_on_set_mode_to_manual = 25;
   Sound sound_on_set_mode_to_tap_open_mic_to_ptt = 26;
   Sound sound_on_set_mode_to_manual_open_mic_to_ptt = 27;
+  Sound sound_on_toggle_mute_global_on = 61;
+  Sound sound_on_toggle_mute_global_off = 62;
 
   HotkeyV3 ptt_single = 10; // --> key_groups (v4)
   HotkeyV3 key_push_to_mute_single = 28; // --> key_groups (v4)
@@ -49,6 +51,7 @@ message Settings {
   HotkeyV3 key_swap_mode_between_manual_and_voice_activity = 35;
   HotkeyV3 key_swap_mode_between_manual_and_tap = 36;
   HotkeyV3 key_swap_mode_between_manual_and_manual_open_mic_to_ptt = 37;
+  HotkeyV3 key_toggle_mute_global = 60;
 
   repeated HotkeyV3 deprecated_extra_trigger_keys = 38; // --> key_groups (v4)
 
@@ -137,6 +140,7 @@ message Ipc {
     IpcCurrentValueChanged current_value_changed = 18;
     IpcMuteStateChanged mute_state_changed = 2;
     IpcSettingsChanged settings_changed = 3;
+    IpcToggleMuteGlobalChanged toggle_mute_global_changed = 31;
 
     IpcSidekickConnected sidekick_connected = 7;
     IpcSidekickDisconnected sidekick_disconnected = 8;
@@ -165,6 +169,7 @@ message Ipc {
     IpcRequestSetPushToTalkState request_set_push_to_talk_state = 27;
     IpcRequestSetPushToMuteState request_set_push_to_mute_state = 28;
     IpcRequestSetPushToMuteGlobalState request_set_push_to_mute_global_state = 29;
+    IpcRequestToggleMuteGlobal request_toggle_mute_global = 30;
   }
 
   reserved 5, 6, 9, 17, 19, 20;
@@ -246,6 +251,10 @@ message IpcMonitoringAllowedChanged {
   bool is_allowed = 1;
 }
 
+message IpcToggleMuteGlobalChanged {
+  bool is_active = 1;
+}
+
 message IpcRequestPlaySfx {
   uint64 sfx = 1;
 }
@@ -279,7 +288,9 @@ enum AppEnabledState {
   // Occures when the license is either invalid or the trial has expired.
   DISABLED_INVALID_LICENSE = 1;
 
-  // Occurs when you're writing into a text box, or when you're biding a key.
+  // Occurs when the app is temporarily disabled due to editing the settings,
+  // such as when you're writing into a text box, binding a key, or changing
+  // a sound effect.
   DISABLED_BLOCKED_BY_GUI = 2;
 }
 
@@ -300,3 +311,5 @@ message IpcRequestSetPushToMuteState {
 message IpcRequestSetPushToMuteGlobalState {
   bool is_down = 1;
 }
+
+message IpcRequestToggleMuteGlobal {}
