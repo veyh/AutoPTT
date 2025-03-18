@@ -1,5 +1,26 @@
 # Changelog
 
+## 2.7.0 - 2025-03-18
+### Added
+* Add `Toggle Mute (Global)` hotkey. While this functionality has already kind of existed by swapping to different modes, this just makes things simpler.
+* Support mp3 sound files.
+* Add default sound effects for `Toggle Mute (Global)` and all activation modes.
+* When configuring a sound effect, show its name in the dialog title.
+* Show a `Play` button for sound effects so they can be previewed without opening the configuration dialog.
+### Changed
+* Rename some activation modes:
+    * `Manual` --> `Push-to-Talk (PTT)`
+    * `Open Mic to PTT (Tap)` --> `Open Mic to Tap`
+    * `Open Mic to PTT (Manual)` --> `Open Mic to PTT`
+* Rename capture modes:
+    * `Default` --> `Peak Meter`
+    * `Advanced` --> `Audio Stream`
+* Make `Audio Stream` the default Capture Mode.
+* Overlay: Change defaults to always show the overlay when inactive and to also show the current activation mode name.
+### Fixed
+* Fix an issue that may have prevented sound settings from being saved.
+* Prevent "Configure Sound" dialog from closing immediately.
+
 ## 2.6.1 - 2025-03-10
 ### Fixed
 * Fix tray icon sometimes disappearing when the app is minimized to tray.
