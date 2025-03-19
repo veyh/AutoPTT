@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.7.1 - 2025-03-19
+### Fixed
+* Fix an issue that caused the UI to sometimes become unresponsive. (This was caused by recent changes to the tray icon code, and affects versions 2.6.1 and 2.7.0.)
+
 ## 2.7.0 - 2025-03-18
 ### Added
 * Add `Toggle Mute (Global)` hotkey. While this functionality has already kind of existed by swapping to different modes, this just makes things simpler.
