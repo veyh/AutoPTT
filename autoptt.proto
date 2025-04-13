@@ -106,6 +106,40 @@ message Sound {
 
 message HotkeyV3 {
   repeated uint32 vk_codes = 1;
+  repeated JoyButton joy_buttons = 2;
+  repeated JoyPov joy_povs = 3;
+}
+
+message JoyButton {
+  JoyId joy_id = 1;
+  uint32 button = 3;
+}
+
+message JoyPov {
+  JoyId joy_id = 1;
+  uint32 index = 2;
+  JoyPovDirection direction = 3;
+}
+
+// These match the return values from SDL_GetJoystickHat.
+enum JoyPovDirection {
+  CENTERED = 0;
+  UP = 1;
+  RIGHT = 2;
+  DOWN = 4;
+  LEFT = 8;
+  RIGHT_UP = 3;   // RIGHT | UP
+  RIGHT_DOWN = 6; // RIGHT | DOWN
+  LEFT_UP = 9;    // LEFT  | UP
+  LEFT_DOWN = 12; // LEFT  | DOWN
+}
+
+message JoyId {
+  // Used to identify the device, so must be provided.
+  bytes guid = 1;
+
+  // Used to show a human readable name only, so technically optional.
+  string name = 2;
 }
 
 message HotkeyGroup {
