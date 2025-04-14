@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.8.0 - 2025-04-14
+### Added
+* Add support for all types of game controllers like steering wheels and joysticks. (Previously, only XBox-compatible gamepads were supported.)
+    * In case of problems, you can add `--no-joystick` to AutoPTT's start command to disable this feature.
+
 ## 2.7.1 - 2025-03-19
 ### Fixed
 * Fix an issue that caused the UI to sometimes become unresponsive. (This was caused by recent changes to the tray icon code, and affects versions 2.6.1 and 2.7.0.)
