@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.9.0 - 2025-05-10
+### Added
+* Allow binding hotkeys to specific gamepads (and gamepads that are not Xbox
+compatible).
+    * Previously, for example, binding to A on one Xbox controller would
+      actually bind to A on any Xbox controller.
+    * Just in case, you can go back to the old behavior with the command
+      line argument `--bind-xinput`.
+
 ## 2.8.0 - 2025-04-14
 ### Added
 * Add support for all types of game controllers like steering wheels and joysticks. (Previously, only XBox-compatible gamepads were supported.)
