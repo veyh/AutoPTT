@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.10.0 - 2025-06-20
+### Added
+* Make `Current Value` red when global mute is active.
+* Match color of `Current Value` text to the value.
+* Highlight all active hotkeys, not just Push-to-Talk.
+### Changed
+* Display game controller buttons starting from 1 instead of 0 (ie. you will no longer see "Button 0" or "POV 0").
+### Fixed
+* Fix an issue that sometimes prevented the app from shutting down properly.
+* When switching to another device, ensure the previous device is unmuted before switching.
+* When the app is closed, unmute the current device.
+
 ## 2.9.0 - 2025-05-10
 ### Added
 * Allow binding hotkeys to specific gamepads (and gamepads that are not Xbox
