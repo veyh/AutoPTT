@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.11.0 - 2025-10-04
+### Added
+* Support **Toggle Mute** for individual PTT keys, meaning you can now keep AutoPTT from pressing some PTT keys while still pressing others. (In other words, this feature is mostly for the **Voice Activity**, **Tap** and **Push-to-Talk** modes.)
+### Fixed
+* Fix a crash that sometimes happened when closing the app, and it had been started as admin.
+
 ## 2.10.0 - 2025-06-20
 ### Added
 * Make `Current Value` red when global mute is active.
