@@ -4,81 +4,166 @@ package autoptt;
 
 message Settings {
   uint32 version = 1;
+  uint64 app_version = 58;
 
-  double threshold = 2;
-
-  bool use_deact_threshold = 3;
-  double deact_threshold = 4;
-
-  bool safe = 5;
-
-  uint32 safe_interval_ms = 6;
-  uint32 deprecated_update_interval_ms = 7;
-  uint32 release_delay_ms = 8;
-
-  ActivationMode activation_mode = 11;
-  MeterType meter_type = 12;
-
+  SelectedTab selected_tab = 51;
   StartOnBootType start_on_boot_type = 13;
-
-  string deprecated_device_name_or_uuid = 14; // --> device_name, device_uuid (v6)
   string license_key = 15;
+  string ipc_addr = 42;
+  bool minimize_to_tray = 39;
+  bool update_check = 41;
   bool use_sidekick = 16;
 
-  Sound sound_on_ptt_down = 17;
-  Sound sound_on_ptt_up = 18;
-  Sound sound_on_push_to_mute_down = 19;
-  Sound sound_on_push_to_mute_up = 20;
-  Sound sound_on_push_to_mute_global_down = 21;
-  Sound sound_on_push_to_mute_global_up = 22;
-  Sound sound_on_set_mode_to_voice_activity = 23;
-  Sound sound_on_set_mode_to_tap = 24;
-  Sound sound_on_set_mode_to_manual = 25;
-  Sound sound_on_set_mode_to_tap_open_mic_to_ptt = 26;
-  Sound sound_on_set_mode_to_manual_open_mic_to_ptt = 27;
-  Sound sound_on_toggle_mute_global_on = 61;
-  Sound sound_on_toggle_mute_global_off = 62;
-  Sound sound_on_toggle_mute_on = 63;
-  Sound sound_on_toggle_mute_off = 64;
+  uint64 profile = 65;
+  repeated Profile profiles = 66;
 
-  HotkeyV3 ptt_single = 10; // --> key_groups (v4)
-  HotkeyV3 key_push_to_mute_single = 28; // --> key_groups (v4)
+  //
+  // Everything below is deprecated by AutoPTT 3.x (IPC v5, settings v8)
+  //
 
-  HotkeyV3 key_push_to_mute_global = 29;
-  HotkeyV3 key_set_mode_to_voice_activity = 30;
-  HotkeyV3 key_set_mode_to_tap = 31;
-  HotkeyV3 key_set_mode_to_manual = 32;
-  HotkeyV3 key_set_mode_to_tap_open_mic_to_ptt = 33;
-  HotkeyV3 key_set_mode_to_manual_open_mic_to_ptt = 34;
-  HotkeyV3 key_swap_mode_between_manual_and_voice_activity = 35;
-  HotkeyV3 key_swap_mode_between_manual_and_tap = 36;
-  HotkeyV3 key_swap_mode_between_manual_and_manual_open_mic_to_ptt = 37;
-  HotkeyV3 key_toggle_mute_global = 60;
+  double x3x_threshold = 2;
 
-  repeated HotkeyV3 deprecated_extra_trigger_keys = 38; // --> key_groups (v4)
+  bool x3x_use_deact_threshold = 3;
+  double x3x_deact_threshold = 4;
 
-  bool minimize_to_tray = 39;
-  bool open_mic_to_ptt_consume_input = 40;
-  bool update_check = 41;
+  bool x3x_safe = 5;
 
-  string ipc_addr = 42;
+  uint32 x3x_safe_interval_ms = 6;
+  uint32 x3x_deprecated_update_interval_ms = 7;
+  uint32 x3x_release_delay_ms = 8;
 
-  bool overlay_enable = 43;
-  OverlaySettings overlay_settings = 44;
+  ActivationMode x3x_activation_mode = 11;
+  MeterType x3x_meter_type = 12;
 
-  string device_display_name = 45;
-  repeated HotkeyGroup key_groups = 50;
+  string x3x_deprecated_device_name_or_uuid = 14; // --> device_name, device_uuid (v6)
+
+  Sound x3x_sound_on_ptt_down = 17;
+  Sound x3x_sound_on_ptt_up = 18;
+  Sound x3x_sound_on_push_to_mute_down = 19;
+  Sound x3x_sound_on_push_to_mute_up = 20;
+  Sound x3x_sound_on_push_to_mute_global_down = 21;
+  Sound x3x_sound_on_push_to_mute_global_up = 22;
+  Sound x3x_sound_on_set_mode_to_voice_activity = 23;
+  Sound x3x_sound_on_set_mode_to_tap = 24;
+  Sound x3x_sound_on_set_mode_to_manual = 25;
+  Sound x3x_sound_on_set_mode_to_tap_open_mic_to_ptt = 26;
+  Sound x3x_sound_on_set_mode_to_manual_open_mic_to_ptt = 27;
+  Sound x3x_sound_on_toggle_mute_global_on = 61;
+  Sound x3x_sound_on_toggle_mute_global_off = 62;
+  Sound x3x_sound_on_toggle_mute_on = 63;
+  Sound x3x_sound_on_toggle_mute_off = 64;
+
+  HotkeyV3 x3x_ptt_single = 10; // --> key_groups (v4)
+  HotkeyV3 x3x_key_push_to_mute_single = 28; // --> key_groups (v4)
+
+  HotkeyV3 x3x_key_push_to_mute_global = 29;
+  HotkeyV3 x3x_key_set_mode_to_voice_activity = 30;
+  HotkeyV3 x3x_key_set_mode_to_tap = 31;
+  HotkeyV3 x3x_key_set_mode_to_manual = 32;
+  HotkeyV3 x3x_key_set_mode_to_tap_open_mic_to_ptt = 33;
+  HotkeyV3 x3x_key_set_mode_to_manual_open_mic_to_ptt = 34;
+  HotkeyV3 x3x_key_swap_mode_between_manual_and_voice_activity = 35;
+  HotkeyV3 x3x_key_swap_mode_between_manual_and_tap = 36;
+  HotkeyV3 x3x_key_swap_mode_between_manual_and_manual_open_mic_to_ptt = 37;
+  HotkeyV3 x3x_key_toggle_mute_global = 60;
+
+  repeated HotkeyV3 x3x_deprecated_extra_trigger_keys = 38; // --> key_groups (v4)
+
+  bool x3x_open_mic_to_ptt_consume_input = 40;
+
+  bool x3x_overlay_enable = 43;
+  OverlaySettings x3x_overlay_settings = 44;
+
+  string x3x_device_display_name = 45;
+  repeated HotkeyGroup x3x_key_groups = 50;
 
   reserved 46 to 49;
 
-  SelectedTab selected_tab = 51;
+  bool x3x_use_tap_activation_window = 52;
+  uint32 x3x_tap_activation_window_ms = 53;
 
-  bool use_tap_activation_window = 52;
-  uint32 tap_activation_window_ms = 53;
+  string x3x_device_name = 56;
+  string x3x_device_uuid = 57;
+}
 
-  string device_name = 56;
-  string device_uuid = 57;
-  uint64 app_version = 58;
+message Profile {
+  bytes id = 1;
+  string name = 2;
+
+  // These are matched with OR
+  repeated ProfileActivationTrigger activation_triggers = 3;
+
+  ProfileSettings settings = 4;
+}
+
+message ProfileSettings {
+  reserved 6;
+
+  double threshold = 1;
+
+  bool use_deact_threshold = 2;
+  double deact_threshold = 3;
+
+  bool safe = 4;
+
+  uint32 safe_interval_ms = 5;
+  uint32 release_delay_ms = 7;
+
+  ActivationMode activation_mode = 8;
+  MeterType meter_type = 9;
+
+  Sound sound_on_ptt_down = 10;
+  Sound sound_on_ptt_up = 11;
+  Sound sound_on_push_to_mute_down = 12;
+  Sound sound_on_push_to_mute_up = 13;
+  Sound sound_on_push_to_mute_global_down = 14;
+  Sound sound_on_push_to_mute_global_up = 15;
+  Sound sound_on_set_mode_to_voice_activity = 16;
+  Sound sound_on_set_mode_to_tap = 17;
+  Sound sound_on_set_mode_to_manual = 18;
+  Sound sound_on_set_mode_to_tap_open_mic_to_ptt = 19;
+  Sound sound_on_set_mode_to_manual_open_mic_to_ptt = 20;
+  Sound sound_on_toggle_mute_global_on = 21;
+  Sound sound_on_toggle_mute_global_off = 22;
+  Sound sound_on_toggle_mute_on = 23;
+  Sound sound_on_toggle_mute_off = 24;
+
+  HotkeyV3 key_push_to_mute_global = 25;
+  HotkeyV3 key_set_mode_to_voice_activity = 26;
+  HotkeyV3 key_set_mode_to_tap = 27;
+  HotkeyV3 key_set_mode_to_manual = 28;
+  HotkeyV3 key_set_mode_to_tap_open_mic_to_ptt = 29;
+  HotkeyV3 key_set_mode_to_manual_open_mic_to_ptt = 30;
+  HotkeyV3 key_swap_mode_between_manual_and_voice_activity = 31;
+  HotkeyV3 key_swap_mode_between_manual_and_tap = 32;
+  HotkeyV3 key_swap_mode_between_manual_and_manual_open_mic_to_ptt = 33;
+  HotkeyV3 key_toggle_mute_global = 34;
+
+  bool open_mic_to_ptt_consume_input = 35;
+
+  bool overlay_enable = 36;
+  OverlaySettings overlay_settings = 37;
+
+  string device_display_name = 38;
+  repeated HotkeyGroup key_groups = 39;
+
+  bool use_tap_activation_window = 40;
+  uint32 tap_activation_window_ms = 41;
+
+  string device_name = 42;
+  string device_uuid = 43;
+}
+
+message ProfileActivationTrigger {
+  enum TextType {
+    BINARY_NAME = 0;
+    BINARY_PATH = 1;
+    WINDOW_TITLE = 2;
+  };
+
+  TextType type = 1;
+  string text = 2;
+  bool active_window_only = 3;
 }
 
 enum ActivationMode {
@@ -154,13 +239,15 @@ message HotkeyGroup {
 
 message SelectedTab {
   oneof tab {
-    SelectedTabGeneral general = 1;
-    SelectedTabDevice device = 2;
+    SelectedTabSettingsGeneral settings_general = 1;
+    SelectedTabSettingsDevice settings_device = 2;
+    SelectedTabOverview overview = 3;
   }
 }
 
-message SelectedTabGeneral {}
-message SelectedTabDevice {
+message SelectedTabOverview {}
+message SelectedTabSettingsGeneral {}
+message SelectedTabSettingsDevice {
   int32 device_index = 1;
 }
 
