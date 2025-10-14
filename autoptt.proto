@@ -13,6 +13,7 @@ message Settings {
   bool minimize_to_tray = 39;
   bool update_check = 41;
   bool use_sidekick = 16;
+  bool auto_profile_switch = 59;
 
   uint64 profile = 65;
   repeated Profile profiles = 66;
