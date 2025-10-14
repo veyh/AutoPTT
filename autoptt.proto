@@ -6,7 +6,6 @@ message Settings {
   uint32 version = 1;
   uint64 app_version = 58;
 
-  SelectedTab selected_tab = 51;
   StartOnBootType start_on_boot_type = 13;
   string license_key = 15;
   string ipc_addr = 42;
@@ -79,6 +78,7 @@ message Settings {
   repeated HotkeyGroup x3x_key_groups = 50;
 
   reserved 46 to 49;
+  reserved 51;
 
   bool x3x_use_tap_activation_window = 52;
   uint32 x3x_tap_activation_window_ms = 53;
@@ -237,20 +237,6 @@ message HotkeyGroup {
   repeated HotkeyV3 extra_triggers = 4;
   repeated HotkeyV3 toggle_mute = 5;
 };
-
-message SelectedTab {
-  oneof tab {
-    SelectedTabSettingsGeneral settings_general = 1;
-    SelectedTabSettingsDevice settings_device = 2;
-    SelectedTabOverview overview = 3;
-  }
-}
-
-message SelectedTabOverview {}
-message SelectedTabSettingsGeneral {}
-message SelectedTabSettingsDevice {
-  int32 device_index = 1;
-}
 
 message Ipc {
   oneof message {
