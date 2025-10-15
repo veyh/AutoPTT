@@ -283,6 +283,9 @@ message Ipc {
     IpcRequestSetPushToMuteGlobalState request_set_push_to_mute_global_state = 29;
     IpcRequestToggleMuteGlobal request_toggle_mute_global = 30;
     IpcRequestToggleMute request_toggle_mute = 33;
+    IpcRequestChangeProfile request_change_profile = 34;
+    IpcRequestSetAutoProfileSwitch request_set_auto_profile_switch = 35;
+    IpcRequestToggleAutoProfileSwitch request_toggle_auto_profile_switch = 36;
   }
 
   reserved 5, 6, 9, 17, 19, 20;
@@ -435,3 +438,13 @@ message IpcRequestToggleMuteGlobal {}
 message IpcRequestToggleMute {
   uint32 key_group_index = 1;
 }
+
+message IpcRequestChangeProfile {
+  bytes profile_id = 1;
+}
+
+message IpcRequestSetAutoProfileSwitch {
+  bool is_enabled = 1;
+}
+
+message IpcRequestToggleAutoProfileSwitch {}
