@@ -21,70 +21,70 @@ message Settings {
   // Everything below is deprecated by AutoPTT 3.x (IPC v5, settings v8)
   //
 
-  double x3x_threshold = 2;
+  double threshold = 2;
 
-  bool x3x_use_deact_threshold = 3;
-  double x3x_deact_threshold = 4;
+  bool use_deact_threshold = 3;
+  double deact_threshold = 4;
 
-  bool x3x_safe = 5;
+  bool safe = 5;
 
-  uint32 x3x_safe_interval_ms = 6;
-  uint32 x3x_deprecated_update_interval_ms = 7;
-  uint32 x3x_release_delay_ms = 8;
+  uint32 safe_interval_ms = 6;
+  uint32 deprecated_update_interval_ms = 7;
+  uint32 release_delay_ms = 8;
 
-  ActivationMode x3x_activation_mode = 11;
-  MeterType x3x_meter_type = 12;
+  ActivationMode activation_mode = 11;
+  MeterType meter_type = 12;
 
-  string x3x_deprecated_device_name_or_uuid = 14; // --> device_name, device_uuid (v6)
+  string deprecated_device_name_or_uuid = 14; // --> device_name, device_uuid (v6)
 
-  Sound x3x_sound_on_ptt_down = 17;
-  Sound x3x_sound_on_ptt_up = 18;
-  Sound x3x_sound_on_push_to_mute_down = 19;
-  Sound x3x_sound_on_push_to_mute_up = 20;
-  Sound x3x_sound_on_push_to_mute_global_down = 21;
-  Sound x3x_sound_on_push_to_mute_global_up = 22;
-  Sound x3x_sound_on_set_mode_to_voice_activity = 23;
-  Sound x3x_sound_on_set_mode_to_tap = 24;
-  Sound x3x_sound_on_set_mode_to_manual = 25;
-  Sound x3x_sound_on_set_mode_to_tap_open_mic_to_ptt = 26;
-  Sound x3x_sound_on_set_mode_to_manual_open_mic_to_ptt = 27;
-  Sound x3x_sound_on_toggle_mute_global_on = 61;
-  Sound x3x_sound_on_toggle_mute_global_off = 62;
-  Sound x3x_sound_on_toggle_mute_on = 63;
-  Sound x3x_sound_on_toggle_mute_off = 64;
+  Sound sound_on_ptt_down = 17;
+  Sound sound_on_ptt_up = 18;
+  Sound sound_on_push_to_mute_down = 19;
+  Sound sound_on_push_to_mute_up = 20;
+  Sound sound_on_push_to_mute_global_down = 21;
+  Sound sound_on_push_to_mute_global_up = 22;
+  Sound sound_on_set_mode_to_voice_activity = 23;
+  Sound sound_on_set_mode_to_tap = 24;
+  Sound sound_on_set_mode_to_manual = 25;
+  Sound sound_on_set_mode_to_tap_open_mic_to_ptt = 26;
+  Sound sound_on_set_mode_to_manual_open_mic_to_ptt = 27;
+  Sound sound_on_toggle_mute_global_on = 61;
+  Sound sound_on_toggle_mute_global_off = 62;
+  Sound sound_on_toggle_mute_on = 63;
+  Sound sound_on_toggle_mute_off = 64;
 
-  HotkeyV3 x3x_ptt_single = 10; // --> key_groups (v4)
-  HotkeyV3 x3x_key_push_to_mute_single = 28; // --> key_groups (v4)
+  HotkeyV3 ptt_single = 10; // --> key_groups (v4)
+  HotkeyV3 key_push_to_mute_single = 28; // --> key_groups (v4)
 
-  HotkeyV3 x3x_key_push_to_mute_global = 29;
-  HotkeyV3 x3x_key_set_mode_to_voice_activity = 30;
-  HotkeyV3 x3x_key_set_mode_to_tap = 31;
-  HotkeyV3 x3x_key_set_mode_to_manual = 32;
-  HotkeyV3 x3x_key_set_mode_to_tap_open_mic_to_ptt = 33;
-  HotkeyV3 x3x_key_set_mode_to_manual_open_mic_to_ptt = 34;
-  HotkeyV3 x3x_key_swap_mode_between_manual_and_voice_activity = 35;
-  HotkeyV3 x3x_key_swap_mode_between_manual_and_tap = 36;
-  HotkeyV3 x3x_key_swap_mode_between_manual_and_manual_open_mic_to_ptt = 37;
-  HotkeyV3 x3x_key_toggle_mute_global = 60;
+  HotkeyV3 key_push_to_mute_global = 29;
+  HotkeyV3 key_set_mode_to_voice_activity = 30;
+  HotkeyV3 key_set_mode_to_tap = 31;
+  HotkeyV3 key_set_mode_to_manual = 32;
+  HotkeyV3 key_set_mode_to_tap_open_mic_to_ptt = 33;
+  HotkeyV3 key_set_mode_to_manual_open_mic_to_ptt = 34;
+  HotkeyV3 key_swap_mode_between_manual_and_voice_activity = 35;
+  HotkeyV3 key_swap_mode_between_manual_and_tap = 36;
+  HotkeyV3 key_swap_mode_between_manual_and_manual_open_mic_to_ptt = 37;
+  HotkeyV3 key_toggle_mute_global = 60;
 
-  repeated HotkeyV3 x3x_deprecated_extra_trigger_keys = 38; // --> key_groups (v4)
+  repeated HotkeyV3 deprecated_extra_trigger_keys = 38; // --> key_groups (v4)
 
-  bool x3x_open_mic_to_ptt_consume_input = 40;
+  bool open_mic_to_ptt_consume_input = 40;
 
-  bool x3x_overlay_enable = 43;
-  OverlaySettings x3x_overlay_settings = 44;
+  bool overlay_enable = 43;
+  OverlaySettings overlay_settings = 44;
 
-  string x3x_device_display_name = 45;
-  repeated HotkeyGroup x3x_key_groups = 50;
+  string device_display_name = 45;
+  repeated HotkeyGroup key_groups = 50;
 
   reserved 46 to 49;
   reserved 51;
 
-  bool x3x_use_tap_activation_window = 52;
-  uint32 x3x_tap_activation_window_ms = 53;
+  bool use_tap_activation_window = 52;
+  uint32 tap_activation_window_ms = 53;
 
-  string x3x_device_name = 56;
-  string x3x_device_uuid = 57;
+  string device_name = 56;
+  string device_uuid = 57;
 }
 
 message Profile {
