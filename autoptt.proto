@@ -18,7 +18,7 @@ message Settings {
   repeated Profile profiles = 66;
 
   //
-  // Everything below is deprecated by AutoPTT 3.x (IPC v5, settings v8)
+  // Everything below is unused in AutoPTT 3.x (IPC v5, settings v8)
   //
 
   double threshold = 2;
