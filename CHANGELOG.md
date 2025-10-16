@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.0.0 - 2025-10-16
+This release comes with considerable internal changes, so if you run into any bugs, please let me know!
+### Added
+* Add support for multiple profiles, which can be set to automatically activate based on what programs are currently running on your computer.
+### Changed
+* Don't store the selected GUI tab in settings. Always start the app in the new Overview tab. Which doesn't currently have a lot of information, so I'm open to suggestions if you find a view like this useful. It was added because the automatic profile switching functionality can't be enabled while in the **Settings / Profile** tab. (You wouldn't want the profile to change while you're busy adjusting its settings, would you?)
+### Fixed
+* Fix a small memory leak.
+* Fix crash when removing a PTT Key that wasn't the last one in the list.
+
 ## 2.11.0 - 2025-10-04
 ### Added
 * Support **Toggle Mute** for individual PTT keys, meaning you can now keep AutoPTT from pressing some PTT keys while still pressing others. (In other words, this feature is mostly for the **Voice Activity**, **Tap** and **Push-to-Talk** modes.)
