@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.1 - 2025-10-26
+### Fixed
+* Fix a crash that happened when starting AutoPTT with a game controller connected. (Only version 3.0.0 was affected by this.)
+
 ## 3.0.0 - 2025-10-16
 This release comes with considerable internal changes, so if you run into any bugs, please let me know!
 ### Added
