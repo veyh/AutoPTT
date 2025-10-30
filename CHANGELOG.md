@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.3 - 2025-10-31
+### Fixed
+* Fix a memory leak that happened when using custom sound effects. (This bug affected basically all versions since 1.10.0.)
+
 ## 3.0.2 - 2025-10-30
 ### Fixed
 * Fix a memory leak introduced in 3.0.0
