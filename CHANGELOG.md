@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.2 - 2025-10-30
+### Fixed
+* Fix a memory leak introduced in 3.0.0
+
 ## 3.0.1 - 2025-10-26
 ### Fixed
 * Fix a crash that happened when starting AutoPTT with a game controller connected. (Only version 3.0.0 was affected by this.)
