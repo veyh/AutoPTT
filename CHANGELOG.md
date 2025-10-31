@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.4 - 2025-10-31
+### Fixed
+* Fix bug in 3.0.3 that caused all sound effects to always be enabled.
+
 ## 3.0.3 - 2025-10-31
 ### Fixed
 * Fix a memory leak that happened when using custom sound effects. (This bug affected basically all versions since 1.10.0.)
