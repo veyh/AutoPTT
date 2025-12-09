@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.5 - 2025-12-09
+### Fixed
+* Fix Push-to-Talk and Push-to-Mute not working through IPC (eg. the Stream Deck plugin)
+
 ## 3.0.4 - 2025-10-31
 ### Fixed
 * Fix bug in 3.0.3 that caused all sound effects to always be enabled.
