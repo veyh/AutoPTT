@@ -12,6 +12,7 @@ message Settings {
   bool minimize_to_tray = 39;
   bool update_check = 41;
   bool use_sidekick = 16;
+  bool use_faker_input = 67;
   bool auto_profile_switch = 59;
 
   uint64 profile = 65;
@@ -262,6 +263,7 @@ message Ipc {
     IpcUpdateCheckFailed update_check_failed = 16;
 
     IpcGuiDeviceChanged gui_device_changed = 24;
+    IpcFakerInputStatus faker_input_status = 37;
 
     //
     // Sent by client
@@ -397,6 +399,10 @@ message IpcServerHello {
 
 message IpcGuiDeviceChanged {
   string device_name_or_uuid = 1;
+}
+
+message IpcFakerInputStatus {
+  bool exists = 1;
 }
 
 message IpcAppEnabledStateChanged {
