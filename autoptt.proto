@@ -11,12 +11,16 @@ message Settings {
   string ipc_addr = 42;
   bool minimize_to_tray = 39;
   bool update_check = 41;
-  bool use_sidekick = 16;
-  bool use_faker_input = 67;
   bool auto_profile_switch = 59;
 
   uint64 profile = 65;
   repeated Profile profiles = 66;
+
+  //
+  // Everything below is unused in AutoPTT 4.x (IPC v6, settings v9)
+  //
+
+  bool use_sidekick = 16; // --> ProfileSettings.input_method
 
   //
   // Everything below is unused in AutoPTT 3.x (IPC v5, settings v8)
@@ -154,6 +158,14 @@ message ProfileSettings {
 
   string device_name = 42;
   string device_uuid = 43;
+
+  InputMethod input_method = 44;
+}
+
+enum InputMethod {
+  VIRTUAL = 0;
+  FAKER = 1;
+  SIDEKICK = 2;
 }
 
 message ProfileActivationTrigger {
