@@ -1,5 +1,21 @@
 # Changelog
 
+## 4.0.0 - 2026-01-05
+### Added
+* Add support for [FakerInput](https://github.com/Ryochan7/FakerInput), which
+works like the [AutoPTT Sidekick](https://github.com/veyh/AutoPTT-Sidekick),
+except it's just a software driver instead of physical hardware.
+* Support sending feedback directly from the app (no longer opens a browser window).
+* Add a Discord link to the feedback view.
+### Changed
+* Remove UPX packing from **AutoPTT.exe**. It was mostly unnecessary since releases (setup & zip) are already compressed. It just means that the unpacked size is a bit larger now.
+* Replace **Use AutoPTT Sidekick** global setting with a profile-specific setting for **Input Method**, which has three choices: Virtual (Default), FakerInput and Sidekick.
+### Fixed
+* Fix crash on app exit.
+* Fix an issue where the app may have become unresponsive when exiting, and the only way to close it would be through the Task Manager.
+* Remove startup entry on uninstall.
+* Fix SFX not playing when changing activation mode through IPC.
+
 ## 3.0.5 - 2025-12-09
 ### Fixed
 * Fix Push-to-Talk and Push-to-Mute not working through IPC (eg. the Stream Deck plugin)
