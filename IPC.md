@@ -18,4 +18,4 @@ The server will also send some other messages right after, such as `IpcActivityS
 
 ## A complete example
 
-You can find a full example on how the this interface is used in the [autoptt-streamdeck](https://github.com/veyh/autoptt-streamdeck/blob/master/src/IPC.ts) repository.
+You can find a full example on how the this interface is used in the [autoptt-streamdeck](https://github.com/veyh/autoptt-streamdeck/blob/master/deps/autoptt-ipc/IPC.ts) repository.
