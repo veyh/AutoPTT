@@ -82,8 +82,7 @@ message Settings {
   string device_display_name = 45;
   repeated HotkeyGroup key_groups = 50;
 
-  reserved 46 to 49;
-  reserved 51;
+  reserved 9, 46 to 49, 51;
 
   bool use_tap_activation_window = 52;
   uint32 tap_activation_window_ms = 53;
