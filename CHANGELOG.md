@@ -1,5 +1,17 @@
 # Changelog
 
+## 4.1.0 - 2026-01-24
+### Added
+* Support automatically starting and stopping programs alongside AutoPTT. To use this feature, create a folder called `autostart` in AutoPTT's installation folder, and place any `.exe` or `.bat` file in there. They will be called with one argument, which will be the IPC Address (default: `tcp://127.1.2.3:4000`). 
+    * Can be disabled with the command line argument `--no-autostart` .
+    * The directory can be changed with `--autostart-dir`.
+### Changed
+* Change the duration of the **Trial** (when you run the app without a license) from 5 minutes to 15 minutes.
+### Fixed
+* Fix a small memory leak (<500 KB/day).
+* Fix a crash caused by game controllers without human-readable names.
+* Fix a crash caused by an IPC client registering with an empty `ipc_tag`.
+
 ## 4.0.0 - 2026-01-05
 ### Added
 * Add support for [FakerInput](https://github.com/Ryochan7/FakerInput), which
