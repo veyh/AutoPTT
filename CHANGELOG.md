@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.1.1 - 2026-01-26
+### Fixed
+* Fix a crash caused by changing settings.
+
 ## 4.1.0 - 2026-01-24
 ### Added
 * Support automatically starting and stopping programs alongside AutoPTT. To use this feature, create a folder called `autostart` in AutoPTT's installation folder, and place any `.exe` or `.bat` file in there. They will be called with one argument, which will be the IPC Address (default: `tcp://127.1.2.3:4000`). 
