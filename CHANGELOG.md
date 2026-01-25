@@ -11,6 +11,9 @@
 * Fix a small memory leak (<500 KB/day).
 * Fix a crash caused by game controllers without human-readable names.
 * Fix a crash caused by an IPC client registering with an empty `ipc_tag`.
+* Fix a crash on app exit (caused by attempting to write logs after logging was terminated).
+* Fix an issue that sometimes caused keys to get stuck with **Consume PTT Key** enabled.
+* Fix an issue with the AutoPTT Sidekick not being treated as virtual input (which also caused PTT keys to get stuck).
 
 ## 4.0.0 - 2026-01-05
 ### Added
