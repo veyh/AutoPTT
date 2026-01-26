@@ -275,6 +275,7 @@ message Ipc {
 
     IpcGuiDeviceChanged gui_device_changed = 24;
     IpcFakerInputStatus faker_input_status = 37;
+    IpcProfileChanged profile_changed = 38;
 
     //
     // Sent by client
@@ -301,7 +302,8 @@ message Ipc {
     IpcRequestToggleAutoProfileSwitch request_toggle_auto_profile_switch = 36;
   }
 
-  reserved 5, 6, 9, 17, 19, 20;
+  reserved 5, 6, 9, 17, 19, 20; // removed
+  reserved 39 to 999; // unused
 }
 
 message IpcActivityStateChanged {
@@ -414,6 +416,11 @@ message IpcGuiDeviceChanged {
 
 message IpcFakerInputStatus {
   bool exists = 1;
+}
+
+message IpcProfileChanged {
+  bytes profile_id_prev = 1;
+  bytes profile_id = 2;
 }
 
 message IpcAppEnabledStateChanged {
