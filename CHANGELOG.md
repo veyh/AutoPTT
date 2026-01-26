@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.2.0 - 2026-01-26
+### Added
+* IPC: Add `IpcProfileChanged` event
+### Fixed
+* Fix possible logging-related crash
+* Fix the **Device** field showing the wrong device after manually switching profiles.
+
 ## 4.1.1 - 2026-01-26
 ### Fixed
 * Fix a crash caused by changing settings.
