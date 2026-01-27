@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.2.1 - 2026-01-26
+### Fixed
+* Fix crash when using **Run at Startup**
+
 ## 4.2.0 - 2026-01-26
 ### Added
 * IPC: Add `IpcProfileChanged` event
