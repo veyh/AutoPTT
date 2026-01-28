@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.3.0 - 2026-01-28
+### Added
+* Add automatic crash reporting which will help in discovering and fixing issues quicker.
+### Fixed
+* Fix crash related to profiles with multiple PTT keys.
+
 ## 4.2.1 - 2026-01-26
 ### Fixed
 * Fix crash when using **Run at Startup**
