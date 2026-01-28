@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.3.1 - 2026-01-28
+### Fixed
+* Fix "Device not found" error being displayed on the GUI when the device was actually found.
+
 ## 4.3.0 - 2026-01-28
 ### Added
 * Add automatic crash reporting which will help in discovering and fixing issues quicker.
