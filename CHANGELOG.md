@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.3.2 - 2026-01-30
+### Fixed
+* Fix error monitoring raw input when program path contains spaces.
+* Fix another crash related to multiple PTT keys.
+
 ## 4.3.1 - 2026-01-28
 ### Fixed
 * Fix "Device not found" error being displayed on the GUI when the device was actually found.
