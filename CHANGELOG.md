@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.3.3 - 2026-02-01
+### Fixed
+* Fix crash when submitting feedback with empty email
+
 ## 4.3.2 - 2026-01-30
 ### Fixed
 * Fix error monitoring raw input when program path contains spaces.
