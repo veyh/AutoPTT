@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.3.4 - 2026-02-03
+This release contains quite a few internal changes related to how text is
+displayed in the GUI, so if you see anything weird, let me know.
+### Fixed
+* Push-to-Mute now takes priority over Secondary PTT.
+* Fix an issue related to copying and pasting in text fields. 
+
 ## 4.3.3 - 2026-02-01
 ### Fixed
 * Fix crash when submitting feedback with empty email
