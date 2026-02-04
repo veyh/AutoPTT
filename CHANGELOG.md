@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.3.6 - 2026-02-04
+### Fixed
+* Fix incorrect text for "Download Update" button
+
 ## 4.3.5 - 2026-02-04
 ### Fixed
 * Fix crash after an IPC client disconnect
