@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.3.5 - 2026-02-04
+### Fixed
+* Fix crash after an IPC client disconnect
+
 ## 4.3.4 - 2026-02-03
 This release contains quite a few internal changes related to how text is
 displayed in the GUI, so if you see anything weird, let me know.
