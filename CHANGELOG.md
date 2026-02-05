@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.3.7 - 2026-02-05
+### Fixed
+* Fallback to opening audio device by name in case its hardware identifier has changed (this fixes an issue with virtual devices like NVIDIA Broadcaster).
+
 ## 4.3.6 - 2026-02-04
 ### Fixed
 * Fix incorrect text for "Download Update" button
