@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.3.8 - 2026-02-06
+### Fixed
+* Fix crash when an audio device is added or removed during startup.
+
 ## 4.3.7 - 2026-02-05
 ### Fixed
 * Fallback to opening audio device by name in case its hardware identifier has changed (this fixes an issue with virtual devices like NVIDIA Broadcaster).
