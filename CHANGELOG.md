@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.3.9 - 2026-02-09
+### Fixed
+* Fix a possible crash related to game controllers
+* Update library used for game controllers. Fixes a number of issues.
+
 ## 4.3.8 - 2026-02-06
 ### Fixed
 * Fix crash when an audio device is added or removed during startup.
