@@ -12,6 +12,7 @@ message Settings {
   bool minimize_to_tray = 39;
   bool update_check = 41;
   bool auto_profile_switch = 59;
+  bool overview_raw_input = 67;
 
   uint64 profile = 65;
   repeated Profile profiles = 66;
@@ -82,13 +83,14 @@ message Settings {
   string device_display_name = 45;
   repeated HotkeyGroup key_groups = 50;
 
-  reserved 9, 46 to 49, 51;
-
   bool use_tap_activation_window = 52;
   uint32 tap_activation_window_ms = 53;
 
   string device_name = 56;
   string device_uuid = 57;
+
+  reserved 9, 46 to 49, 51; // removed
+  reserved 68 to 999; // not used yet
 }
 
 message Profile {
