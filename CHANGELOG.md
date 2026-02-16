@@ -1,5 +1,20 @@
 # Changelog
 
+## 4.4.0 - 2026-02-16
+### Added
+* Add `--refresh-ext-input-on-timer` command line argument.
+    - This is a workaround for a bug in
+      [Sidekick](https://github.com/veyh/AutoPTT-Sidekick/), where multiple
+      commands written at nearly the same time can get ignored. You would
+      only have run into this bug if you used the Sidekick with multiple
+      PTT keys that activate/deactivate at the same time (for example if
+      you used the same Secondary PTT key for them).
+    - The Sidekick has already been updated to fix the bug though, so I
+      would recommend reflashing it with [the new version](https://github.com/veyh/AutoPTT-Sidekick/releases/tag/v1.0.1).
+* Add "Show Active Input in Overview" setting. When enabled, it will list active keys and buttons from all keyboards and mice.
+### Fixed
+* Fix an issue that left any custom command line arguments out when restarting the app after an update or if it was started on boot.
+
 ## 4.3.9 - 2026-02-09
 ### Fixed
 * Fix a possible crash related to game controllers
