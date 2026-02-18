@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.4.1 - 2026-02-18
+### Fixed
+* Fix an issue that may have caused a freeze on an IPC client connect
+* Fix an issue with AutoPTT sometimes being unable to exit completely
+
 ## 4.4.0 - 2026-02-16
 ### Added
 * Add `--refresh-ext-input-on-timer` command line argument.
