@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.5.0 - 2026-02-25
+### Added
+* Support moving profiles by dragging
+### Fixed
+* Fix crash when automatic profile switching is enabled and a profile has an empty trigger
+
 ## 4.4.1 - 2026-02-18
 ### Fixed
 * Fix an issue that may have caused a freeze on an IPC client connect
