@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.6.0 - 2026-03-09
+### Added
+* Support "Run at Startup" as admin user
+### Fixed
+* Reset input device state when the device is removed. This fixes a bug where, if a device was removed while one of its keys was active, the key would stay active until AutoPTT was restarted.
+* Detect when AutoPTT Sidekick hardware is attached and removed. Previously it would only be correctly detected on app startup.
+
 ## 4.5.0 - 2026-02-25
 ### Added
 * Support moving profiles by dragging
