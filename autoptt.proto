@@ -198,6 +198,8 @@ enum StartOnBootType {
   NO = 0;
   YES = 1;
   YES_MINIMIZED = 2;
+  YES_ADMIN = 3;
+  YES_MINIMIZED_ADMIN = 4;
 }
 
 message Sound {
