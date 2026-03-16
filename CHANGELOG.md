@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.6.1 - 2026-03-16
+### Fixed
+* Fix mic getting stuck as active when an active PTT key is removed
+* Release PTT key when it's removed (eg. when switching to another profile that doesn't have it)
+* Fix issue where Sidekick was not treated as a virtual device after it was unplugged and plugged back in (which caused PTT keys associated with Sidekick to get stuck and the Sidekick to become unresponsive)
+
 ## 4.6.0 - 2026-03-09
 ### Added
 * Support "Run at Startup" as admin user
