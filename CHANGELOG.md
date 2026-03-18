@@ -1,5 +1,21 @@
 # Changelog
 
+## 4.7.0 - 2026-03-18
+### Added
+* Support adding "exclude" triggers for the Default profile.
+    - Normally, when no other profile's triggers match, AutoPTT will switch
+      to the Default profile. With this change, AutoPTT will now instead
+      keep the current profile if any of the triggers on the Default
+      profile match the active window.
+    - This lets you prevent unnecessary profile switches from eg.
+      alt-tabbing (because the alt-tab menu is just a window that belongs
+      to explorer.exe, so you can add a Binary Name trigger for
+      explorer.exe to ignore it)
+* Support selecting profile triggers from a list of recently active windows (just click the magnifying glass after adding an empty trigger)
+* Add some nicer icons
+### Fixed
+* Fix automatic profile switching for triggers that had "Active Window Only" unchecked
+
 ## 4.6.1 - 2026-03-16
 ### Fixed
 * Fix mic getting stuck as active when an active PTT key is removed
