@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.7.1 - 2026-03-19
+### Fixed
+* Fix potential crash when opening the list of recently active windows
+
 ## 4.7.0 - 2026-03-18
 ### Added
 * Support adding "exclude" triggers for the Default profile.
