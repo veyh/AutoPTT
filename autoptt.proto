@@ -252,7 +252,18 @@ message HotkeyGroup {
   repeated HotkeyV3 push_to_mute = 3;
   repeated HotkeyV3 extra_triggers = 4;
   repeated HotkeyV3 toggle_mute = 5;
+
+  // This is synced with `extra_triggers` so you can use the same index, eg.
+  // for `extra_triggers[1].vk_codes[2]` you would check
+  // `extra_triggers_consume_when_active[1].vk_codes[2]`
+  repeated ExtraTriggersConsumeWhenActive extra_triggers_consume_when_active = 6;
 };
+
+message ExtraTriggersConsumeWhenActive {
+  repeated bool vk_codes = 1;
+  repeated bool joy_buttons = 2;
+  repeated bool joy_povs = 3;
+}
 
 message Ipc {
   oneof message {
