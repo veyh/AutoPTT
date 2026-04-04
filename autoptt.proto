@@ -261,8 +261,8 @@ message HotkeyGroup {
 
 message ExtraTriggersConsumeWhenActive {
   repeated bool vk_codes = 1;
-  repeated bool joy_buttons = 2;
-  repeated bool joy_povs = 3;
+  // repeated bool joy_buttons = 2; // NOT SUPPORTED
+  // repeated bool joy_povs = 3;    // NOT SUPPORTED
 }
 
 message Ipc {
