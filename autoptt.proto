@@ -315,10 +315,11 @@ message Ipc {
     IpcRequestChangeProfile request_change_profile = 34;
     IpcRequestSetAutoProfileSwitch request_set_auto_profile_switch = 35;
     IpcRequestToggleAutoProfileSwitch request_toggle_auto_profile_switch = 36;
+    IpcRequestBringToFront request_bring_to_front = 39;
   }
 
   reserved 5, 6, 9, 17, 19, 20; // removed
-  reserved 39 to 999; // unused
+  reserved 40 to 999; // unused
 }
 
 message IpcActivityStateChanged {
@@ -487,3 +488,4 @@ message IpcRequestSetAutoProfileSwitch {
 }
 
 message IpcRequestToggleAutoProfileSwitch {}
+message IpcRequestBringToFront {}
