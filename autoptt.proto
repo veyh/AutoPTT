@@ -7,6 +7,8 @@ message Settings {
   uint64 app_version = 58;
 
   StartOnBootType start_on_boot_type = 13;
+  bool start_on_boot_global_muted = 68;
+
   string license_key = 15;
   string ipc_addr = 42;
   bool minimize_to_tray = 39;
@@ -90,7 +92,7 @@ message Settings {
   string device_uuid = 57;
 
   reserved 9, 46 to 49, 51; // removed
-  reserved 68 to 999; // not used yet
+  reserved 69 to 999; // not used yet
 }
 
 message Profile {
