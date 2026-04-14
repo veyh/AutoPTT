@@ -1,5 +1,15 @@
 # Changelog
 
+## 4.8.0 - 2026-04-14
+### Added
+* When using "Run at Startup," you can now also have the microphone be globally muted.
+* Add "Help" and "About" tabs.
+### Fixed
+* Fix crash when GPU was restarted (for example during a GPU driver update).
+* Ensure only a single instance of AutoPTT is running. When attempting to start another instance, the existing one will be brought to the front (just as when you click "Show" from the tray icon). You can override this behavior with the command line argument `--new-instance` but do note that the IPC server will fail to start unless you also use a different `--settings-file` that has a different IPC address.
+* Fix an issue where exiting the app would fail when a (virtual) game controller with 256 or more buttons was connected. (This was caused by a bug in SDL, and [my fix](https://github.com/libsdl-org/SDL/pull/15304) was included in version 3.4.4 of the library.)
+* Retry failed license check a few times on startup. Should help when running AutoPTT on system startup and network connectivity is not immediately available.
+
 ## 4.7.1 - 2026-03-19
 ### Fixed
 * Fix potential crash when opening the list of recently active windows
