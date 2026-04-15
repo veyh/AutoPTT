@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.8.1 - 2026-04-15
+### Fixed
+* Fix bug introduced in 4.8.0 that caused AutoPTT to start two instances when using "Run at Startup"
+
 ## 4.8.0 - 2026-04-14
 ### Added
 * When using "Run at Startup," you can now also have the microphone be globally muted.
