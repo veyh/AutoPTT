@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.8.2 - 2026-05-20
+### Added
+* Check for updates periodically while the app is running.
+### Removed
+* Remove the "Safe" setting. It was not useful. Mostly just confusing. The core "Safe" functionality that syncs PTT key states is already built-in anyway (and doesn't cause weird problems like this setting).
+
 ## 4.8.1 - 2026-04-15
 ### Fixed
 * Fix bug introduced in 4.8.0 that caused AutoPTT to start two instances when using "Run at Startup"
