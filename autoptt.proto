@@ -113,9 +113,6 @@ message ProfileSettings {
   bool use_deact_threshold = 2;
   double deact_threshold = 3;
 
-  bool safe = 4;
-
-  uint32 safe_interval_ms = 5;
   uint32 release_delay_ms = 7;
 
   ActivationMode activation_mode = 8;
@@ -163,6 +160,13 @@ message ProfileSettings {
   string device_uuid = 43;
 
   InputMethod input_method = 44;
+
+  //
+  // Unused in AutoPTT 4.8.2 and later
+  //
+
+  bool safe = 4;
+  uint32 safe_interval_ms = 5;
 }
 
 enum InputMethod {
