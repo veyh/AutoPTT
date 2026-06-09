@@ -430,6 +430,8 @@ message IpcServerHello {
   // Format:  (major * 1000 * 1000) + (minor * 1000) + patch
   // Example: app version 1.2.3 --> 1002003
   uint32 app_version = 2;
+
+  bool is_first_boot = 3;
 }
 
 message IpcGuiDeviceChanged {
