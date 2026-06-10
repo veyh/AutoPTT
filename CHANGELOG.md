@@ -1,5 +1,15 @@
 # Changelog
 
+## 4.9.0 - 2026-06-10
+### Added
+* Select the default system microphone automatically on first boot
+* When "Show Active Input in Overview" is enabled, also show the logical state (what keys Windows thinks are down)
+* Show current device name in Overview
+### Changed
+* Enable SFX for "Toggle Mute (Global)" by default
+### Fixed
+* Detect audio devices with names that contain non-ascii characters (Chinese, Japanese, Korean, etc.)
+
 ## 4.8.2 - 2026-05-20
 ### Added
 * Check for updates periodically while the app is running.
