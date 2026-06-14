@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.10.0 - 2026-06-14
+### Added
+* Add a "First Time Setup" wizard for new users
+### Changed
+* Change the UI style a little
+
 ## 4.9.0 - 2026-06-10
 ### Added
 * Select the default system microphone automatically on first boot
