@@ -133,6 +133,7 @@ message ProfileSettings {
   Sound sound_on_toggle_mute_global_off = 22;
   Sound sound_on_toggle_mute_on = 23;
   Sound sound_on_toggle_mute_off = 24;
+  Sound sound_on_mic_inactive_warning = 47;
 
   HotkeyV3 key_push_to_mute_global = 25;
   HotkeyV3 key_set_mode_to_voice_activity = 26;
@@ -161,6 +162,15 @@ message ProfileSettings {
 
   InputMethod input_method = 44;
 
+  MicInactiveWarning mic_inactive_warning = 45;
+  uint32 mic_inactive_warning_window_ms = 46;
+
+  AfkDetectionMethod mic_inactive_afk_detection_method = 48;
+  uint32 mic_inactive_afk_threshold_ms = 49;
+  bool mic_inactive_warning_disable_while_afk = 50;
+
+  reserved 51 to 999; // unused
+
   //
   // Unused in AutoPTT 4.8.2 and later
   //
@@ -173,6 +183,17 @@ enum InputMethod {
   VIRTUAL = 0;
   FAKER = 1;
   SIDEKICK = 2;
+}
+
+enum MicInactiveWarning {
+  NONE = 0;
+  CURRENT_VALUE = 1;
+  ACTIVITY = 2;
+}
+
+enum AfkDetectionMethod {
+  ANY_INPUT = 0;
+  PHYSICAL_KEYBOARD = 1;
 }
 
 message ProfileActivationTrigger {
@@ -297,6 +318,8 @@ message Ipc {
     IpcGuiDeviceChanged gui_device_changed = 24;
     IpcFakerInputStatus faker_input_status = 37;
     IpcProfileChanged profile_changed = 38;
+    IpcLastInputInfo last_input_info = 41;
+    IpcMicInactiveChanged mic_inactive_changed = 42;
 
     //
     // Sent by client
@@ -322,10 +345,11 @@ message Ipc {
     IpcRequestSetAutoProfileSwitch request_set_auto_profile_switch = 35;
     IpcRequestToggleAutoProfileSwitch request_toggle_auto_profile_switch = 36;
     IpcRequestBringToFront request_bring_to_front = 39;
+    IpcRequestLastInputInfo request_last_input_info = 40;
   }
 
   reserved 5, 6, 9, 17, 19, 20; // removed
-  reserved 40 to 999; // unused
+  reserved 43 to 999; // unused
 }
 
 message IpcActivityStateChanged {
@@ -497,3 +521,17 @@ message IpcRequestSetAutoProfileSwitch {
 
 message IpcRequestToggleAutoProfileSwitch {}
 message IpcRequestBringToFront {}
+
+message IpcRequestLastInputInfo {}
+message IpcLastInputInfo {
+  // uses WINAPI GetLastInputInfo, includes mouse movement
+  uint64 since_last_input_ms = 1;
+
+  // this only considers physical keyboard events
+  // SendInput, FakerInput & Sidekick events are ignored
+  uint64 since_last_input_physical_ms = 2;
+}
+
+message IpcMicInactiveChanged {
+  bool is_inactive = 1;
+}
