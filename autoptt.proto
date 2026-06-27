@@ -163,7 +163,7 @@ message ProfileSettings {
   InputMethod input_method = 44;
 
   MicInactiveWarning mic_inactive_warning = 45;
-  uint32 mic_inactive_warning_window_ms = 46;
+  uint32 mic_inactive_warning_threshold_ms = 46;
 
   AfkDetectionMethod mic_inactive_afk_detection_method = 48;
   uint32 mic_inactive_afk_threshold_ms = 49;
