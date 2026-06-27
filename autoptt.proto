@@ -169,7 +169,12 @@ message ProfileSettings {
   uint32 mic_inactive_afk_threshold_ms = 49;
   bool mic_inactive_warning_disable_while_afk = 50;
 
-  reserved 51 to 999; // unused
+  bool afk_auto_mute = 51;
+  bool afk_auto_unmute = 52;
+  uint32 afk_auto_mute_afk_threshold_ms = 53;
+  AfkDetectionMethod afk_auto_mute_afk_detection_method = 54;
+
+  reserved 55 to 999; // unused
 
   //
   // Unused in AutoPTT 4.8.2 and later
