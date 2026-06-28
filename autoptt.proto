@@ -198,7 +198,7 @@ enum MicInactiveWarning {
 
 enum AfkDetectionMethod {
   ANY_INPUT = 0;
-  PHYSICAL_KEYBOARD = 1;
+  PHYSICAL_KEYBOARD_MOUSE = 1;
 }
 
 message ProfileActivationTrigger {
@@ -529,11 +529,11 @@ message IpcRequestBringToFront {}
 
 message IpcRequestLastInputInfo {}
 message IpcLastInputInfo {
-  // uses WINAPI GetLastInputInfo, includes mouse movement
+  // Uses WINAPI GetLastInputInfo, Includes mouse movement.
   uint64 since_last_input_ms = 1;
 
-  // this only considers physical keyboard events
-  // SendInput, FakerInput & Sidekick events are ignored
+  // Physical keyboard or mouse events (no movement).
+  // SendInput, FakerInput & Sidekick events are ignored.
   uint64 since_last_input_physical_ms = 2;
 }
 
