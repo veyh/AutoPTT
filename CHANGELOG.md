@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.12.0 - 2026-07-03
+### Added
+* Clear AFK from game controller button presses
+
 ## 4.11.1 - 2026-07-02
 ### Fixed
 * Add missing default settings for **Mic Inactivity Warning** and **AFK Auto Mute**
