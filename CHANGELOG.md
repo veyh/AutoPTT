@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.11.1 - 2026-07-02
+### Fixed
+* Add missing default settings for **Mic Inactivity Warning** and **AFK Auto Mute**
+
 ## 4.11.0 - 2026-07-02
 ### Added
 * Add **Mic Inactive Warning**, which lets you know when no sound or activity
