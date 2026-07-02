@@ -1,5 +1,17 @@
 # Changelog
 
+## 4.11.0 - 2026-07-02
+### Added
+* Add **Mic Inactive Warning**, lets you know when no sound or activity has
+been detected in a while. The warning can be disabled while AFK. When the
+warning is active, the overlay will display an "[INACTIVE]" text and a
+sound effect can also be played.
+* Add **AFK Auto Mute**, which can globally mute (and unmute) your mic based
+on whether you're AFK.
+* Warn about unsupported PTT keys for FakerInput (F13-F24)
+### Fixed
+* Fix bug that may have caused AutoPTT to stop working when switching from Virtual Input to Faker/Sidekick, or vice versa.
+
 ## 4.10.0 - 2026-06-14
 ### Added
 * Add a "First Time Setup" wizard for new users
