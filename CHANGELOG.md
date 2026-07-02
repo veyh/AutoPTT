@@ -2,9 +2,9 @@
 
 ## 4.11.0 - 2026-07-02
 ### Added
-* Add **Mic Inactive Warning**, lets you know when no sound or activity has
-been detected in a while. The warning can be disabled while AFK. When the
-warning is active, the overlay will display an "[INACTIVE]" text and a
+* Add **Mic Inactive Warning**, which lets you know when no sound or activity
+has been detected in a while. The warning can be disabled while AFK. When
+the warning is active, the overlay will display an "[INACTIVE]" text and a
 sound effect can also be played.
 * Add **AFK Auto Mute**, which can globally mute (and unmute) your mic based
 on whether you're AFK.
