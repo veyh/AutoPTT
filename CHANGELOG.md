@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.13.0 - 2026-07-16
+### Added
+* Automatically restart app 5 seconds after successful update (you can still click the button to restart without waiting though).
+### Fixed
+* Fix incorrect clipping of some text elements in the UI
+
 ## 4.12.0 - 2026-07-03
 ### Added
 * Clear AFK from game controller button presses
