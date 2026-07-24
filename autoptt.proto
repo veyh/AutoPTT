@@ -135,24 +135,12 @@ message ProfileSettings {
   Sound sound_on_toggle_mute_off = 24;
   Sound sound_on_mic_inactive_warning = 47;
 
-  HotkeyV3 key_push_to_mute_global = 25;
-  HotkeyV3 key_set_mode_to_voice_activity = 26;
-  HotkeyV3 key_set_mode_to_tap = 27;
-  HotkeyV3 key_set_mode_to_manual = 28;
-  HotkeyV3 key_set_mode_to_tap_open_mic_to_ptt = 29;
-  HotkeyV3 key_set_mode_to_manual_open_mic_to_ptt = 30;
-  HotkeyV3 key_swap_mode_between_manual_and_voice_activity = 31;
-  HotkeyV3 key_swap_mode_between_manual_and_tap = 32;
-  HotkeyV3 key_swap_mode_between_manual_and_manual_open_mic_to_ptt = 33;
-  HotkeyV3 key_toggle_mute_global = 34;
-
   bool open_mic_to_ptt_consume_input = 35;
 
   bool overlay_enable = 36;
   OverlaySettings overlay_settings = 37;
 
   string device_display_name = 38;
-  repeated HotkeyGroup key_groups = 39;
 
   bool use_tap_activation_window = 40;
   uint32 tap_activation_window_ms = 41;
@@ -174,7 +162,26 @@ message ProfileSettings {
   uint32 afk_auto_mute_afk_threshold_ms = 53;
   AfkDetectionMethod afk_auto_mute_afk_detection_method = 54;
 
-  reserved 55 to 999; // unused
+  repeated Key keys = 55;
+
+  reserved 56 to 999; // unused
+
+  //
+  // unused in AutoPTT 5.0.0 and later
+  //
+
+  repeated HotkeyGroup key_groups = 39;
+
+  HotkeyV3 key_push_to_mute_global = 25;
+  HotkeyV3 key_set_mode_to_voice_activity = 26;
+  HotkeyV3 key_set_mode_to_tap = 27;
+  HotkeyV3 key_set_mode_to_manual = 28;
+  HotkeyV3 key_set_mode_to_tap_open_mic_to_ptt = 29;
+  HotkeyV3 key_set_mode_to_manual_open_mic_to_ptt = 30;
+  HotkeyV3 key_swap_mode_between_manual_and_voice_activity = 31;
+  HotkeyV3 key_swap_mode_between_manual_and_tap = 32;
+  HotkeyV3 key_swap_mode_between_manual_and_manual_open_mic_to_ptt = 33;
+  HotkeyV3 key_toggle_mute_global = 34;
 
   //
   // Unused in AutoPTT 4.8.2 and later
@@ -238,6 +245,48 @@ message Sound {
   bool enabled = 1;
   string file = 2;
   double volume = 3;
+}
+
+message Key {
+  oneof variant {
+    HotkeyV3 key_push_to_mute_global = 1;
+    HotkeyV3 key_set_mode_to_voice_activity = 2;
+    HotkeyV3 key_set_mode_to_tap = 3;
+    HotkeyV3 key_set_mode_to_manual = 4;
+    HotkeyV3 key_set_mode_to_tap_open_mic_to_ptt = 5;
+    HotkeyV3 key_set_mode_to_manual_open_mic_to_ptt = 6;
+    HotkeyV3 key_swap_mode_between_manual_and_voice_activity = 7;
+    HotkeyV3 key_swap_mode_between_manual_and_tap = 8;
+    HotkeyV3 key_swap_mode_between_manual_and_manual_open_mic_to_ptt = 9;
+    HotkeyV3 key_toggle_mute_global = 10;
+    KeyPushToTalk key_push_to_talk = 11;
+    KeyPushToMute key_push_to_mute = 12;
+    KeyToggleMute key_toggle_mute = 13;
+    KeySecondaryPushToTalk key_secondary_push_to_talk = 14;
+  }
+
+  reserved 15 to 999;
+}
+
+message KeyPushToTalk {
+  uint64 ptt_id = 1;
+  HotkeyV3 key = 2;
+  string display_name = 3;
+}
+
+message KeyPushToMute {
+  uint64 ptt_id = 1;
+  HotkeyV3 key = 2;
+}
+
+message KeyToggleMute {
+  uint64 ptt_id = 1;
+  HotkeyV3 key = 2;
+}
+
+message KeySecondaryPushToTalk {
+  uint64 ptt_id = 1;
+  HotkeyV3 key = 2;
 }
 
 message HotkeyV3 {
