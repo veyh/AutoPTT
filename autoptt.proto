@@ -271,7 +271,8 @@ message Key {
 message KeyPushToTalk {
   uint64 ptt_id = 1;
   HotkeyV3 key = 2;
-  string display_name = 3;
+  string overlay_display_name = 3;
+  int64 overlay_sort_priority = 4;
 }
 
 message KeyPushToMute {
