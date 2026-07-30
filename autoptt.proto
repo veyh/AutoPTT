@@ -170,18 +170,18 @@ message ProfileSettings {
   // unused in AutoPTT 5.0.0 and later
   //
 
-  repeated HotkeyGroup x_key_groups = 39;
+  repeated HotkeyGroup key_groups = 39;
 
-  HotkeyV3 x_key_push_to_mute_global = 25;
-  HotkeyV3 x_key_set_mode_to_voice_activity = 26;
-  HotkeyV3 x_key_set_mode_to_tap = 27;
-  HotkeyV3 x_key_set_mode_to_manual = 28;
-  HotkeyV3 x_key_set_mode_to_tap_open_mic_to_ptt = 29;
-  HotkeyV3 x_key_set_mode_to_manual_open_mic_to_ptt = 30;
-  HotkeyV3 x_key_swap_mode_between_manual_and_voice_activity = 31;
-  HotkeyV3 x_key_swap_mode_between_manual_and_tap = 32;
-  HotkeyV3 x_key_swap_mode_between_manual_and_manual_open_mic_to_ptt = 33;
-  HotkeyV3 x_key_toggle_mute_global = 34;
+  HotkeyV3 key_push_to_mute_global = 25;
+  HotkeyV3 key_set_mode_to_voice_activity = 26;
+  HotkeyV3 key_set_mode_to_tap = 27;
+  HotkeyV3 key_set_mode_to_manual = 28;
+  HotkeyV3 key_set_mode_to_tap_open_mic_to_ptt = 29;
+  HotkeyV3 key_set_mode_to_manual_open_mic_to_ptt = 30;
+  HotkeyV3 key_swap_mode_between_manual_and_voice_activity = 31;
+  HotkeyV3 key_swap_mode_between_manual_and_tap = 32;
+  HotkeyV3 key_swap_mode_between_manual_and_manual_open_mic_to_ptt = 33;
+  HotkeyV3 key_toggle_mute_global = 34;
 
   //
   // Unused in AutoPTT 4.8.2 and later
