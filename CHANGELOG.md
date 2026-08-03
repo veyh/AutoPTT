@@ -41,6 +41,7 @@ an older version of AutoPTT until the problem gets fixed.
 * Fix Push-to-Talk not working via IPC clients like the Stream Deck plugin
   when the PTT key did not have any Secondary PTT keys assigned.
 * Fix a crash in the Overlay.
+* Fix bug that sometimes prevented the app from restarting after an update.
 
 ## 4.13.0 - 2026-07-16
 ### Added
