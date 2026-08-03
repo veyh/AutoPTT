@@ -443,7 +443,7 @@ message IpcSidekickConnected {
 }
 
 message IpcSidekickDisconnected {}
-message IpcRequestRestart {}
+message IpcRequestRestart { bool as_admin = 1; }
 message IpcRequestExit {}
 message IpcRequestUpdate {}
 
