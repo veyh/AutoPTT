@@ -1,5 +1,47 @@
 # Changelog
 
+## 5.0.0 - 2026-08-03
+This is kind of a big release with mostly UI changes but it does also
+include quite a few changes under the hood, mainly related to keybinds. 
+
+After updating, check the "Hotkeys" section and make sure your keybinds are
+still there.
+
+If any keybinds are missing though, I would ask that you go into your
+AutoPTT installation directory and find the latest
+`AutoPTT.settings.bin.<number>.bak` and send it to me so I can look at what
+went wrong.
+
+Then you can either add your keybinds back manually or close AutoPTT, copy
+the above file and replace `AutoPTT.settings.bin` with that, then install
+an older version of AutoPTT until the problem gets fixed.
+
+### Added
+* It's now possible to add an arbitrary number of hotkeys of any kind.
+* The top row of the window now displays the following information:
+    * A progres bar indicating the current mic level
+    * On the left side, text in the format of `<Profile> | <Activation Mode> | <Mic>`
+    * On the right side, currently active (or muted) PTT keys and their release delays
+### Changed
+* Automatic Profile Switching is now only disabled when the AutoPTT window
+  is active (ie. on the top/foreground).
+* Hotkey display names for the Overlay are now changed from the Overlay section
+* Adjusting the Activation and Deactivation Threshold is now done from a
+  single bar that also shows the current sound level.
+* Push-to-Talk keys now conflict with global Push-to-Mute and Toggle Mute
+  keys, and any conflicting keys will be unbound.
+* Some of the hotkeys for swapping between modes have shorter names.
+### Fixed
+* Fix a crash that could have happened after adding a PTT key.
+* Fix small memory leak when activity state changes.
+* When creating a new profile and using the Default profile as the base,
+  don't copy over the triggers from the Default profile (because the
+  triggers in the Default profile work as a blacklist, whereas other
+  profiles use triggers as a whitelist).
+* Fix Push-to-Talk not working via IPC clients like the Stream Deck plugin
+  when the PTT key did not have any Secondary PTT keys assigned.
+* Fix a crash in the Overlay.
+
 ## 4.13.0 - 2026-07-16
 ### Added
 * Automatically restart app 5 seconds after successful update (you can still click the button to restart without waiting though).
