@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0.1 - 2026-08-10
+### Fixed
+* Fix hotkeys sometimes not working after starting the app with a trial license
+
 ## 5.0.0 - 2026-08-03
 This is kind of a big release with mostly UI changes but it does also
 include quite a few changes under the hood, mainly related to keybinds. 
