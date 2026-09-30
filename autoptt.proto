@@ -92,7 +92,6 @@ message Settings {
   string device_uuid = 57;
 
   reserved 9, 46 to 49, 51; // removed
-  reserved 69 to 999; // not used yet
 }
 
 message Profile {
@@ -163,8 +162,6 @@ message ProfileSettings {
   AfkDetectionMethod afk_auto_mute_afk_detection_method = 54;
 
   repeated Key keys = 55;
-
-  reserved 56 to 999; // unused
 
   //
   // unused in AutoPTT 5.0.0 and later
@@ -404,7 +401,6 @@ message Ipc {
   }
 
   reserved 5, 6, 9, 17, 19, 20; // removed
-  reserved 43 to 999; // unused
 }
 
 message IpcActivityStateChanged {
