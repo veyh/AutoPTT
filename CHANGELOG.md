@@ -1,5 +1,14 @@
 # Changelog
 
+## 6.0.0 - 2026-10-02
+### Changed
+* The free trial now lasts for 7 days from the first launch of the app. After the 7 days are up, the app will no longer function without a valid license.
+### Fixed
+* Fix a rare crash on app exit
+* Fix an issue that may have caused the settings file to get corrupted (and reset to defaults on next app startup) if the computer crashed while the file was being accessed
+* Fix handling of non-ascii characters in autostart plugins and self-updater
+* Fix bug that caused most of the app functionality to be disabled when the window was alt-tabbed out of or hidden to the system tray while a text field was focused. (Functionality will still remain disabled while a text field is focused and the window is active, though.)
+
 ## 5.0.1 - 2026-08-10
 ### Fixed
 * Fix hotkeys sometimes not working after starting the app with a trial license
