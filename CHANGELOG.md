@@ -1,5 +1,9 @@
 # Changelog
 
+## 6.0.1 - 2026-10-05
+### Fixed
+* Fix crash on first time setup when the default device was not found or it was disabled in sound settings
+
 ## 6.0.0 - 2026-10-02
 ### Changed
 * The free trial now lasts for 7 days from the first launch of the app. After the 7 days are up, the app will no longer function without a valid license.
