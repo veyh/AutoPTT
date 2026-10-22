@@ -1,5 +1,12 @@
 # Changelog
 
+## 6.1.0 - 2026-10-22
+### Added
+* Add code signing for official releases, which should (eventually) keep Microsoft SmartScreen & Defender from treating AutoPTT as suspicious.
+
+### Fixed
+* Fix license sometimes being treated as invalid when using Run at Startup. (This bug only affected versions 6.0.0 and 6.0.1.)
+
 ## 6.0.1 - 2026-10-05
 ### Fixed
 * Fix crash on first time setup when the default device was not found or it was disabled in sound settings
