@@ -1,5 +1,10 @@
 # Changelog
 
+## 6.1.1 - 2026-11-10
+### Fixed
+* Fix another issue that may have caused the settings file to get corrupted (and reset to defaults on next app startup) if the computer crashed while the file was being accessed
+* Fix a bug that in rare cases prevented AutoPTT from detecting any microphone activity when "Audio Capture Method" was set to "Audio Stream"
+
 ## 6.1.0 - 2026-10-22
 ### Added
 * Add code signing for official releases, which should (eventually) keep Microsoft SmartScreen & Defender from treating AutoPTT as suspicious.
